@@ -1,3 +1,4 @@
+# Robot Setup and Usage
 ## ROS 2 Installation and UR5 Setup on Ubuntu Jammy with ROS 2 Humble
 Based off of the official [ROS 2 Installation Guide](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
 
