@@ -59,14 +59,10 @@ echo "export ROS_AUTOMATIC_DISCOVERY_RANGE=SUBNET" >> ~/.bashrc
 ```bash
 # Verify environment variables
 printenv | grep -i ROS
-```
-Should print
-```markdown
-ROS_VERSION=2
-ROS_PYTHON_VERSION=3
-ROS_DISTRO=humble
-ROS_DOMAIN_ID=0
-ROS_AUTOMATIC_DISCOVERY_RANGE=SUBNET
+
+# ROS_VERSION=2
+# ROS_PYTHON_VERSION=3
+# ROS_DISTRO=humble
 ```
 
 ### Setup PREEMPT_RT kernel
