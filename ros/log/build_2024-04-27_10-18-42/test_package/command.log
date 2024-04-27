@@ -1,4 +1,0 @@
-Invoking command in '/home/mfact/TactileSensing/tactile-sensing/ros/build/test_package': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mfact/TactileSensing/tactile-sensing/ros/build/test_package -- -j16 -l16
-Invoked command in '/home/mfact/TactileSensing/tactile-sensing/ros/build/test_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/mfact/TactileSensing/tactile-sensing/ros/build/test_package -- -j16 -l16
-Invoking command in '/home/mfact/TactileSensing/tactile-sensing/ros/build/test_package': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mfact/TactileSensing/tactile-sensing/ros/build/test_package
-Invoked command in '/home/mfact/TactileSensing/tactile-sensing/ros/build/test_package' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/mfact/TactileSensing/tactile-sensing/ros/build/test_package
