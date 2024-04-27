@@ -4,8 +4,7 @@ Based off of the official [ROS 2 Installation Guide](https://docs.ros.org/en/hum
 ### Update and Upgrade Packages
 
 ```bash
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt upgrade
 ```
 ### Set Locale to UTF-8
 ```bash
@@ -30,8 +29,7 @@ sudo add-apt-repository universe
 
 ### Add ROS 2 GPG Key and Repository
 ```bash
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt upgrade
 sudo apt install curl
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
