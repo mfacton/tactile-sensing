@@ -72,6 +72,9 @@ ROS_AUTOMATIC_DISCOVERY_RANGE=SUBNET
 Not necessarily needed because we have a CB3 robot not an e-Series, but if we need better preformance controlling the robot, it is possible with a realtime kernel
 I'm not gonna do this because I'm using my personal laptop, but for lab pcs, installation can be found [here](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/installation/real_time.html)
 
+### UR5 Setup
+Based off of the official [UR Installation Guide](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/installation/installation.html)
+
 ### Install UR Controller Package
 ```bash
 sudo apt-get install ros-humble-ur
