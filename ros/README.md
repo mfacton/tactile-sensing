@@ -123,3 +123,22 @@ ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.
 # Using basic controller
 ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 target_filename:="<parent_folder>/my_robot_calibration.yaml"
 ```
+
+## Good to know ROS2 commands
+### Create package
+```bash
+cd tactile-sensing/ros/src
+
+# To create python or c++ package
+ros2 pkg create --build-type <ament_python|ament_cmake> <package_name>
+```
+### Build packages
+```bash
+cd tactile-sensing/ros
+colcon build
+```
+### Source packages
+```bash
+# Recommended to source in new terminal
+source tactile-sensing/ros/install/local_setup.bash
+```
