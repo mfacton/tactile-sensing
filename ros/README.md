@@ -79,8 +79,46 @@ sudo apt-get install ros-humble-ur
 ros2 pkg list | grep -i ur
 ```
 
-### Usage: Launch UR Robot Controller
+### Network Setup
+Connect the UR control box directly to the remote PC with an ethernet cable.
+
+Open the network settings from the UR teach pendant (Setup Robot -> Network) and enter these settings:
+```markdown
+IP address: 192.168.1.102
+Subnet mask: 255.255.255.0
+Default gateway: 192.168.1.1
+Preferred DNS server: 192.168.1.1
+Alternative DNS server: 0.0.0.0
+```
+
+Create Wired Connection.
+```markdown
+IPv4
+Manual
+Address: 192.168.1.101
+Netmask: 255.255.255.0
+Gateway: 192.168.1.1
+```
+
+Verify connection with PC.
+```markdown
+ping 192.168.1.102
+```
+
+### Setup Robot
+[Installing a URCap](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/user_docs/installation/install_urcap_cb3.html#install-urcap-cb3)
+
+### Extract Calibration Data
+```bash
+ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.102 target_filename:="<parent_folder>/my_robot_calibration.yaml"
+```
+
+### Setup URSim (Optional)
+[URSim Setup Guide](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/installation/ursim_docker.html#start-a-ursim-docker-container)
+
+## Usage
+### Launch UR Robot Controller
 ```bash
 # Using basic controller
-ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.2
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 target_filename:="<parent_folder>/my_robot_calibration.yaml"
 ```
