@@ -142,3 +142,18 @@ colcon build
 # Recommended to source in new terminal
 source tactile-sensing/ros/install/local_setup.bash
 ```
+### Run package
+```bash
+ros2 run <package_name> <executable_name>
+```
+### List nodes
+```bash
+ros2 node list
+```
+### List topics
+```bash
+ros2 topic list
+```
+### Echo topic
+```bash
+ros2 topic echo <topic_name>
