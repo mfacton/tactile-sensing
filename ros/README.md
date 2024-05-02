@@ -121,7 +121,7 @@ ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.
 ### Launch UR Robot Controller
 ```bash
 # Using basic controller
-ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 target_filename:="<parent_folder>/my_robot_calibration.yaml"
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false target_filename:="<parent_folder>/my_robot_calibration.yaml"
 ```
 
 ## Good to know ROS2 commands
