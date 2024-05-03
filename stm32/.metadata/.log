@@ -1,0 +1,42 @@
+!SESSION 2024-05-03 14:08:13.634 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-03 14:09:22.822
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-03 14:09:22.822
+!MESSAGE Log4j2 initialized with config file /home/mfact/TactileSensing/tactile-sensing/stm32/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-03 14:09:24.797
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2024-05-03 14:09:59.813 -----------------------------------------------
+eclipse.buildId=Version 1.15.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-05-03 14:10:04.473
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-05-03 14:10:04.473
+!MESSAGE Log4j2 initialized with config file /home/mfact/TactileSensing/tactile-sensing/stm32/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-05-03 14:10:06.235
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-03 14:17:15.704
+!MESSAGE Indexed 'LatticeBoardV1' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-03 14:17:19.252
+!MESSAGE Indexed 'LatticeBoardV1' (19 sources, 81 headers) in 1.75 sec: 4,411 declarations; 17,774 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.009%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-03 14:21:38.754
+!MESSAGE Indexed 'LatticeBoardV1' (22 sources, 84 headers) in 0.895 sec: 5,639 declarations; 34,397 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.005%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-05-03 14:23:06.279
+!MESSAGE Indexed 'LatticeBoardV1' (19 sources, 81 headers) in 0.871 sec: 4,411 declarations; 17,774 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.009%)

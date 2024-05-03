@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,ros2
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,ros2
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows
 
 ### Linux ###
 *~
@@ -49,39 +49,6 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-### STM32 ###
-.metadata/
-
-### ROS2 ###
-install/
-log/
-build/
-
-# Ignore generated docs
-*.dox
-*.wikidoc
-
-# eclipse stuff
-.project
-.cproject
-
-# qcreator stuff
-CMakeLists.txt.user
-
-srv/_*.py
-*.pcd
-*.pyc
-qtcreator-*
-*.user
-
-
-# Emacs
-.#*
-
-# Colcon custom files
-COLCON_IGNORE
-AMENT_IGNORE
-
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -108,4 +75,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,ros2
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows
