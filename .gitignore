@@ -49,6 +49,9 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+### STM32 ###
+.metadata/
+
 ### ROS2 ###
 install/
 log/
