@@ -116,8 +116,15 @@ ping 192.168.1.101
 ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.102 target_filename:="robot_calibration.yaml"
 ```
 
-### Run URSim (Optional)
+### Setup URSim (Optional)
 ```bash
+sudo docker network create --subnet=192.168.56.0/24 ursim_net
+```
+
+### Run URSim
+```bash
+# one
+sudo docker run --rm -it -p 5900:5900 -p 6080:6080 --net ursim_net --ip 192.168.56.101 -v ./ursim/urcaps:/urcaps -v ./ursim/programs:/ursim/programs --name ursim universalrobots/ursim_cb3
 sudo docker run --rm -it -p 5900:5900 -p 6080:6080 -v ./ursim/urcaps:/urcaps -v ./ursim/programs:/ursim/programs --name ursim universalrobots/ursim_cb3
 ```
 
@@ -125,7 +132,8 @@ sudo docker run --rm -it -p 5900:5900 -p 6080:6080 -v ./ursim/urcaps:/urcaps -v 
 ### Launch UR Robot Controller
 ```bash
 # Using scaled joint controller
-ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false initial_joint_controller:=scaled_joint_trajectory_controller target_filename:="robot_calibration.yaml"
+# If using URSim no need for calibration file
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false target_filename:="robot_calibration.yaml"
 ros2 control set_controller_state forward_position_controller active
 ```
 
