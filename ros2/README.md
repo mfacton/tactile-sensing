@@ -46,7 +46,6 @@ sudo apt install ros-humble-ros-base
 sudo apt install ros-dev-tools
 sudo apt install ros-humble-ros2-control
 sudo apt install ros-humble-ros2-controllers
-sudo apt install ros-humble-moveit
 ```
 
 ### Setup Environment
