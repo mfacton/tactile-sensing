@@ -129,12 +129,12 @@ sudo docker run --rm -it -p 5900:5900 -p 6080:6080 -v ./ursim/urcaps:/urcaps -v 
 ```
 
 ## Usage
-### Launch UR Robot Controller
+### Launch UR Robot Controller and MoveIt
 ```bash
 # Using scaled joint controller
 # If using URSim no need for calibration file
 ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false target_filename:="robot_calibration.yaml"
-ros2 control set_controller_state forward_position_controller active
+ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5 launch_rviz:=true
 ```
 
 ## Good to know ROS2 commands
