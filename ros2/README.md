@@ -124,7 +124,7 @@ ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.
 ```bash
 # Using scaled joint controller
 ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false initial_joint_controller:=scaled_joint_trajectory_controller target_filename:="robot_calibration.yaml"
-ros2 control switch_controllers --activate scaled_joint_trajectory_controller
+ros2 control set_controller_state forward_position_controller active
 ```
 
 ## Good to know ROS2 commands
