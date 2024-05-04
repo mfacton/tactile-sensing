@@ -116,8 +116,10 @@ ping 192.168.1.101
 ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.102 target_filename:="robot_calibration.yaml"
 ```
 
-### Setup URSim (Optional)
-[URSim Setup Guide](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/installation/ursim_docker.html#start-a-ursim-docker-container)
+### Run URSim (Optional)
+```bash
+sudo docker run --rm -it -p 5900:5900 -p 6080:6080 -v ./ursim/urcaps:/urcaps -v ./ursim/programs:/ursim/programs --name ursim universalrobots/ursim_cb3
+```
 
 ## Usage
 ### Launch UR Robot Controller
