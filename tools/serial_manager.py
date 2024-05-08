@@ -6,12 +6,12 @@ class DeviceNotFound(Exception):
 
 class SerialManager:
     """Wrapper class for pyserial"""
-    def __init__(self, device_name, baud=115200, device_number=1) -> None:
+    def __init__(self, device_name, baud=115200, device_number=0) -> None:
         self.baud = baud
         ports = serial.tools.list_ports.comports()
         for port in ports:
             if port.description == device_name:
-                if device_number == 1:
+                if not device_number:
                     self.device = port.device
                     self.ser = serial.Serial(self.device, self.baud)
                     return
