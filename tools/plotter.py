@@ -28,7 +28,7 @@ class PlotColors(Enum):
     BLACK = (0, 0, 0)
 
 
-class LinePlot:
+class Plot:
     """Line Plot class"""
 
     def __init__(
