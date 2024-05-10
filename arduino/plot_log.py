@@ -27,7 +27,6 @@ if not device_num:
 
 #plotter = Plot(data_length=NUM_ADC*len(managers), height_scale=0.5, pixel_shift=3, title="Device Plot")
 #logger = Logger("data/log1.csv")
-#logger.open()
 
 while True:
     all_values = []

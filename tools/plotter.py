@@ -73,7 +73,7 @@ class Plot:
                     self.line_thickness,
                 )
             self.last_points[s] = new_data[s] * self.height_scale
-        
+
         if self.first_plot:
             self.first_plot = False
 
