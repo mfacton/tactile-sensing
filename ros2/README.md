@@ -116,7 +116,7 @@ ping 192.168.1.101
 
 ### Extract Calibration Data
 ```bash
-ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.102 target_filename:="robot_calibration.yaml"
+ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.101 target_filename:="robot_calibration.yaml"
 ```
 
 ## Usage
@@ -124,7 +124,7 @@ ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.
 ```bash
 # Using scaled joint controller
 # If using URSim no need for calibration file
-ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false target_filename:="robot_calibration.yaml"
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.101 launch_rviz:=false target_filename:="robot_calibration.yaml"
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5 launch_rviz:=true
 ```
 
