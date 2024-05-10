@@ -25,16 +25,21 @@ if not device_num:
     print("No devices found")
     sys.exit(1)
 
-plotter = Plot(data_length=NUM_ADC*len(managers), height_scale=0.5, pixel_shift=3, title="Device Plot")
-logger = Logger("data/log1.csv")
-logger.open()
+#plotter = Plot(data_length=NUM_ADC*len(managers), height_scale=0.5, pixel_shift=3, title="Device Plot")
+#logger = Logger("data/log1.csv")
+#logger.open()
 
 while True:
     all_values = []
+    data = True
     for manager in managers:
-        data = manager.read_bytes(18)
-        all_values += struct.unpack('<9H', data)
+        data = manager.read_line()
+        if len(data) == NUM_ADC*2+2:
+            all_values += struct.unpack(f'<{NUM_ADC}H', data[1:NUM_ADC*2+1])
+        else:
+            data = False
 
-    time.sleep(0.001)
-    plotter.push(all_values)
-    logger.push(all_values)
+    if data:
+        time.sleep(0.001)
+#        plotter.push(all_values)
+#        logger.push(all_values)

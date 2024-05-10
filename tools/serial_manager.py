@@ -30,4 +30,4 @@ class SerialManager:
 
     def read_line(self):
         """Read line from serial"""
-        return self.ser.readline().decode("utf-8")
+        return self.ser.readline()

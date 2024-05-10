@@ -4,7 +4,7 @@
 
 const uint8_t pins[] = { A0, A1, A2, A3, A4, A5, A6, A7, A8 };
 uint16_t vals[NUM_ADC];
-uint8_t buf[NUM_ADC*2];
+uint8_t buf[NUM_ADC*2+2] = {'\r'};
 
 unsigned long targetTime;
 
@@ -13,8 +13,11 @@ void setup() {
     pinMode(pins[i], INPUT);
   }
 
+  buf[NUM_ADC*2] = '\n';
+
   Serial.begin(BAUD);
   while (!Serial);
+  
   targetTime = millis();
 }
 
@@ -32,5 +35,5 @@ void loop() {
   targetTime += DELAY_MS;
 
   // Write data
-  Serial.write(buf, NUM_ADC*2);
+  Serial.write(buf, NUM_ADC*2+2);
 }
