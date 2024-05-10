@@ -1,0 +1,740 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "42359282-3c38-4c09-8349-f48e95cb0c82")
+	(paper "A5")
+	(lib_symbols
+		(symbol "User_Symbols:P4V-MINI"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -1.27 1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "P4V-MINI"
+				(at -3.81 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "User_Footprints:P4V-MINI"
+				(at -3.81 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-all-sensors-corporation/5-INCH-G-P4V-MINI/502214"
+				(at -5.08 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Differential Pressure Sensor"
+				(at -4.572 4.826 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "P4V-MINI_1_1"
+				(rectangle
+					(start 0 0)
+					(end 7.62 -8.89)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin no_connect line
+					(at 10.16 -5.08 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -11.43 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 2.54 270)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+5V"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 76.2 46.99) (xy 76.2 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "470af3a8-fc73-4b5d-bc61-5c10d0733c27")
+	)
+	(wire
+		(pts
+			(xy 83.82 54.61) (xy 86.36 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "936035e8-0728-4d54-9118-e69e47283c16")
+	)
+	(wire
+		(pts
+			(xy 76.2 63.5) (xy 76.2 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c605b2e1-80a0-4618-ace3-1343c699f530")
+	)
+	(hierarchical_label "OUT"
+		(shape output)
+		(at 86.36 54.61 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "75ad2fbd-378f-45fe-a84b-b598af5a234a")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 76.2 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20f5f849-7bdf-4d7c-998d-bdf5dd2d47c8")
+		(property "Reference" "#PWR04"
+			(at 76.2 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 76.2 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 76.2 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd33cd50-fadc-41b5-8bd7-14aa2cf9c09c")
+		)
+		(instances
+			(project "micro-carrier"
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/7e115be6-fa8e-4b29-a9d5-5737a9198a97"
+					(reference "#PWR04")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/730bd792-2c17-4547-94d6-3b0119bc2723"
+					(reference "#PWR06")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b14b820f-f262-4e4b-b03b-489707a9dcb6"
+					(reference "#PWR08")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/e73266a8-275e-4ee8-b06e-7c59b14370bf"
+					(reference "#PWR010")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b4ae56bd-fa9e-4396-beb6-56e69da00021"
+					(reference "#PWR012")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/6a9d3f50-d116-441b-8766-29178f03f1f1"
+					(reference "#PWR014")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/451bc1fc-6c30-4135-8f61-8aee11a455d5"
+					(reference "#PWR016")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/8fd10634-0f15-415c-981c-633cc1dffb03"
+					(reference "#PWR018")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/f524c665-5039-465a-8af3-bb3b1511ba94"
+					(reference "#PWR020")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b7ad28e7-f0c7-49cd-9a6a-8a6f78724ff3"
+					(reference "#PWR022")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/73def8bb-2986-4891-afc6-4861df6a8655"
+					(reference "#PWR024")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/49d48b57-5515-4431-9d22-842051227ee8"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 76.2 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4ccbdc2a-c113-4642-a324-ed54d5480a64")
+		(property "Reference" "#PWR03"
+			(at 76.2 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 76.2 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 76.2 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b63bb0be-40ee-4dfc-9efa-22a93fc10740")
+		)
+		(instances
+			(project "micro-carrier"
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/7e115be6-fa8e-4b29-a9d5-5737a9198a97"
+					(reference "#PWR03")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/730bd792-2c17-4547-94d6-3b0119bc2723"
+					(reference "#PWR05")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b14b820f-f262-4e4b-b03b-489707a9dcb6"
+					(reference "#PWR07")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/e73266a8-275e-4ee8-b06e-7c59b14370bf"
+					(reference "#PWR09")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b4ae56bd-fa9e-4396-beb6-56e69da00021"
+					(reference "#PWR011")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/6a9d3f50-d116-441b-8766-29178f03f1f1"
+					(reference "#PWR013")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/451bc1fc-6c30-4135-8f61-8aee11a455d5"
+					(reference "#PWR015")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/8fd10634-0f15-415c-981c-633cc1dffb03"
+					(reference "#PWR017")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/f524c665-5039-465a-8af3-bb3b1511ba94"
+					(reference "#PWR019")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b7ad28e7-f0c7-49cd-9a6a-8a6f78724ff3"
+					(reference "#PWR021")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/73def8bb-2986-4891-afc6-4861df6a8655"
+					(reference "#PWR023")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/49d48b57-5515-4431-9d22-842051227ee8"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "User_Symbols:P4V-MINI")
+		(at 73.66 52.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "a6e824c4-7b94-4962-8738-147ea863d68e")
+		(property "Reference" "U1"
+			(at 72.39 55.2449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "P4V-MINI"
+			(at 72.39 57.7849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "User_Footprints:P4V-MINI"
+			(at 69.85 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/amphenol-all-sensors-corporation/5-INCH-G-P4V-MINI/502214"
+			(at 68.58 45.212 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Differential Pressure Sensor"
+			(at 69.088 47.244 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c4355f08-0cd6-4285-921a-0ac3e28f3c9a")
+		)
+		(pin "4"
+			(uuid "85f192ef-c662-4397-b4bb-f082be72e0dd")
+		)
+		(pin "3"
+			(uuid "06302647-5b18-45fe-a23c-a904d75f1a1c")
+		)
+		(pin "2"
+			(uuid "c8ba5b59-1a8b-47e3-b22c-145dbddc13b0")
+		)
+		(instances
+			(project "micro-carrier"
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/49d48b57-5515-4431-9d22-842051227ee8"
+					(reference "U1")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/7e115be6-fa8e-4b29-a9d5-5737a9198a97"
+					(reference "U2")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/730bd792-2c17-4547-94d6-3b0119bc2723"
+					(reference "U3")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b14b820f-f262-4e4b-b03b-489707a9dcb6"
+					(reference "U4")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/e73266a8-275e-4ee8-b06e-7c59b14370bf"
+					(reference "U5")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b4ae56bd-fa9e-4396-beb6-56e69da00021"
+					(reference "U6")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/6a9d3f50-d116-441b-8766-29178f03f1f1"
+					(reference "U7")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/451bc1fc-6c30-4135-8f61-8aee11a455d5"
+					(reference "U8")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/8fd10634-0f15-415c-981c-633cc1dffb03"
+					(reference "U9")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/f524c665-5039-465a-8af3-bb3b1511ba94"
+					(reference "U10")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/b7ad28e7-f0c7-49cd-9a6a-8a6f78724ff3"
+					(reference "U11")
+					(unit 1)
+				)
+				(path "/ab17cd65-9e1e-4025-be93-4ff6b18e83df/73def8bb-2986-4891-afc6-4861df6a8655"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
