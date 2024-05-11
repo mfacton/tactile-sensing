@@ -1,3 +1,5 @@
+"""Manages serial connections to devices"""
+
 import serial
 import serial.tools.list_ports
 
@@ -14,12 +16,12 @@ class SerialManager:
         ports = serial.tools.list_ports.comports()
         for port in ports:
             if port.description == device_name:
-                if not device_number:
+                if device_number == 0:
                     self.device = port.device
                     self.ser = serial.Serial(self.device, self.baud)
                     return
-                else:
-                    device_number -= 1
+
+                device_number -= 1
 
         raise DeviceNotFound(f"{device_name} not found")
 

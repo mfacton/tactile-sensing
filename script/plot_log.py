@@ -1,4 +1,5 @@
 import struct
+import sys
 import time
 
 from tools.logger import Logger
@@ -19,11 +20,16 @@ while True:
         break
     device_num += 1
 
-if not device_num:
+if device_num == 0:
     print("No devices found")
     sys.exit(1)
 
-# plotter = Plot(data_length=NUM_ADC*len(managers), height_scale=0.5, pixel_shift=3, title="Device Plot")
+plotter = Plot(
+    data_length=NUM_ADC * len(managers),
+    height_scale=0.5,
+    pixel_shift=3,
+    title=f"Arduino Micro {device_num}",
+)
 # logger = Logger("data/log1.csv")
 
 while True:
@@ -38,5 +44,5 @@ while True:
 
     if data:
         time.sleep(0.001)
-#        plotter.push(all_values)
+        plotter.push(all_values)
 #        logger.push(all_values)
