@@ -1,8 +1,10 @@
 """Simple Line Plotter for streaming high bandwidth data"""
 
 from enum import Enum
+
 import cv2
 import numpy as np
+
 
 class PlotColors(Enum):
     """Colors for each data segment"""
@@ -40,7 +42,7 @@ class Plot:
         height_scale=1,
         line_thickness=1,
         data_colors=list(PlotColors),
-        title="Plot"
+        title="Plot",
     ):
         self.data_length = data_length
         self.pixel_shift = pixel_shift
@@ -56,9 +58,7 @@ class Plot:
 
     def push(self, new_data):
         """Add next point to plot"""
-        self.canvas[:, : -self.pixel_shift, :] = self.canvas[
-            :, self.pixel_shift :, :
-        ]
+        self.canvas[:, : -self.pixel_shift, :] = self.canvas[:, self.pixel_shift :, :]
         self.canvas[:, -self.pixel_shift :, :] = 0
         for s in range(self.data_length):
             if not self.first_plot:
@@ -69,7 +69,7 @@ class Plot:
                         self.width - self.pixel_shift,
                         self.height - int(self.last_points[s]),
                     ),
-                    self.data_colors[s%len(self.data_colors)].value,
+                    self.data_colors[s % len(self.data_colors)].value,
                     self.line_thickness,
                 )
             self.last_points[s] = new_data[s] * self.height_scale

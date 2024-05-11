@@ -1,6 +1,4 @@
 """Downsampler tool"""
-import sys
-sys.path.append('..')
 
 from tools.loader import Loader
 from tools.logger import Logger

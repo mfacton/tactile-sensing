@@ -1,11 +1,14 @@
 import serial
 import serial.tools.list_ports
 
+
 class DeviceNotFound(Exception):
     """Cannot find device"""
 
+
 class SerialManager:
     """Wrapper class for pyserial"""
+
     def __init__(self, device_name, baud=115200, device_number=0) -> None:
         self.baud = baud
         ports = serial.tools.list_ports.comports()
