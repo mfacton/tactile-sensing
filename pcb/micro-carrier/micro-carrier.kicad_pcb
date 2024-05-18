@@ -2555,7 +2555,7 @@
 			(uuid "20ed0a0c-b4be-49d8-8689-ccabb9528dbb")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 20.32 270)
+			(at 0 20.32 -90)
 			(layer "F.Fab")
 			(uuid "e494b8e4-dc56-4aee-bf3c-747296b391e6")
 			(effects
@@ -4435,8 +4435,8 @@
 		(layer "Edge.Cuts")
 		(uuid "eb9eb194-5af4-4bc9-b4df-ce5f492b934a")
 	)
-	(gr_text "Micro Carrier V1"
-		(at 135.89 78.74 90)
+	(gr_text "Micro Carrier V1.1"
+		(at 135.89 76.835 90)
 		(layer "B.SilkS")
 		(uuid "d371cf05-4650-4118-b271-5dd569c3592f")
 		(effects
