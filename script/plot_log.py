@@ -43,6 +43,5 @@ while True:
             data = False
 
     if data:
-        time.sleep(0.001)
         plotter.push(all_values)
 #        logger.push(all_values)
