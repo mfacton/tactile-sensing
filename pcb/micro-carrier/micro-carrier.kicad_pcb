@@ -192,6 +192,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C509262"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "45bf4659-bf7f-4c45-8052-b5ab37a5d11f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/8fd10634-0f15-415c-981c-633cc1dffb03/a6e824c4-7b94-4962-8738-147ea863d68e")
 		(sheetname "Sensor9")
 		(sheetfile "sensor.kicad_sch")
@@ -423,6 +436,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bc1b4782-b9e0-47e7-88e1-81df84958c13")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C509262"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "57d8af02-89f1-422a-8af6-458c3668a567")
 			(effects
 				(font
 					(size 1 1)
@@ -668,6 +694,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C509262"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bb834985-a38c-47c4-b074-2f25dbee6162")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/f524c665-5039-465a-8af3-bb3b1511ba94/a6e824c4-7b94-4962-8738-147ea863d68e")
 		(sheetname "Sensor10")
 		(sheetfile "sensor.kicad_sch")
@@ -906,6 +945,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C509262"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "76f70980-6091-4fc1-9e22-97e07ef3a57e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/730bd792-2c17-4547-94d6-3b0119bc2723/a6e824c4-7b94-4962-8738-147ea863d68e")
 		(sheetname "Sensor3")
 		(sheetfile "sensor.kicad_sch")
@@ -1114,6 +1166,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1126,6 +1179,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1138,6 +1192,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1251,6 +1306,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2c9896d6-ec5e-47c1-b48c-c3dd378076ac")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C509262"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4f5d0b10-db52-44de-a486-3d7951ac267f")
 			(effects
 				(font
 					(size 1 1)
@@ -1466,6 +1534,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1478,6 +1547,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1490,6 +1560,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -1497,7 +1568,7 @@
 		(path "/4088c52f-c77c-4828-9424-46337c6ccf0e")
 		(sheetname "Root")
 		(sheetfile "micro-carrier.kicad_sch")
-		(attr through_hole)
+		(attr through_hole dnp)
 		(fp_line
 			(start -1.33 -1.33)
 			(end 0 -1.33)
@@ -1926,6 +1997,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C509262"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3ebbb44c-79c8-48c4-8b3d-a93548e957b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/b7ad28e7-f0c7-49cd-9a6a-8a6f78724ff3/a6e824c4-7b94-4962-8738-147ea863d68e")
 		(sheetname "Sensor11")
 		(sheetfile "sensor.kicad_sch")
@@ -2164,6 +2248,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C509262"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d1b55c74-9989-4699-abed-f371559d7163")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/49d48b57-5515-4431-9d22-842051227ee8/a6e824c4-7b94-4962-8738-147ea863d68e")
 		(sheetname "Sensor1")
 		(sheetfile "sensor.kicad_sch")
@@ -2372,6 +2469,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2384,6 +2482,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2396,6 +2495,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -2403,7 +2503,7 @@
 		(path "/c2c83f59-45d8-4433-96d7-70539f47735e")
 		(sheetname "Root")
 		(sheetfile "micro-carrier.kicad_sch")
-		(attr through_hole)
+		(attr through_hole dnp)
 		(fp_line
 			(start 1.33 1.27)
 			(end 1.33 41.97)
@@ -2832,6 +2932,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C509262"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e8ed2ab4-5132-4e3f-8789-39444fd2f763")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/6a9d3f50-d116-441b-8766-29178f03f1f1/a6e824c4-7b94-4962-8738-147ea863d68e")
 		(sheetname "Sensor7")
 		(sheetfile "sensor.kicad_sch")
@@ -3070,6 +3183,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C509262"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6ebf7bd8-90db-4bf8-ba68-487c96b7dd92")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/b14b820f-f262-4e4b-b03b-489707a9dcb6/a6e824c4-7b94-4962-8738-147ea863d68e")
 		(sheetname "Sensor4")
 		(sheetfile "sensor.kicad_sch")
@@ -3278,6 +3404,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3290,6 +3417,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3302,6 +3430,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3415,6 +3544,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b770a3f0-9eaf-48fd-a2bd-a12861a95800")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C509262"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "79700ef1-b5ff-46e6-85eb-7e79d65ed2a9")
 			(effects
 				(font
 					(size 1 1)
@@ -3630,6 +3772,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3642,6 +3785,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3654,6 +3798,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3767,6 +3912,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d5fb798d-a634-4aec-a54a-8362e7600d14")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C509262"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fd4f1749-7f99-4c8e-87b1-e4f72002f9a8")
 			(effects
 				(font
 					(size 1 1)
@@ -3982,6 +4140,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -3994,6 +4153,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4006,6 +4166,7 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -4119,6 +4280,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "027e3d8e-7868-443f-9b91-3cf9082eb062")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C509262"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "cda4b702-29d7-49a3-a05e-e9b1abd15e5c")
 			(effects
 				(font
 					(size 1 1)
