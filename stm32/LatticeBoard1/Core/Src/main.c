@@ -330,7 +330,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -368,7 +368,7 @@ static void MX_SPI2_Init(void)
   hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi2.Init.NSS = SPI_NSS_SOFT;
-  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
   hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -406,7 +406,7 @@ static void MX_SPI3_Init(void)
   hspi3.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi3.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi3.Init.NSS = SPI_NSS_SOFT;
-  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
   hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -443,25 +443,25 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOE, CSA1_Pin|CSC11_Pin|CSC3_Pin|CSC2_Pin
                           |CSC1_Pin|CSB15_Pin|CSB14_Pin|CSB13_Pin
-                          |CSB12_Pin|CSB11_Pin|CSA3_Pin|CSA2_Pin, GPIO_PIN_RESET);
+                          |CSB12_Pin|CSB11_Pin|CSA3_Pin|CSA2_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, CSC15_Pin|CSC14_Pin|CSB3_Pin|CSB2_Pin
-                          |CSB1_Pin, GPIO_PIN_RESET);
+                          |CSB1_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, CSC13_Pin|CSC12_Pin|CSB10_Pin|CSB9_Pin
                           |CSC8_Pin|CSB8_Pin|CSC9_Pin|CSC10_Pin
-                          |CSA5_Pin|CSA4_Pin, GPIO_PIN_RESET);
+                          |CSA5_Pin|CSA4_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOD, CSC7_Pin|CSB7_Pin|CSC6_Pin|CSB6_Pin
                           |CSC5_Pin|CSB5_Pin|CSC4_Pin|CSB4_Pin
                           |CSA8_Pin|CSA9_Pin|CSA10_Pin|CSA7_Pin
-                          |CSA6_Pin|CSA11_Pin|CSA12_Pin|CSA13_Pin, GPIO_PIN_RESET);
+                          |CSA6_Pin|CSA11_Pin|CSA12_Pin|CSA13_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, CSA15_Pin|CSA14_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, CSA15_Pin|CSA14_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : CSA1_Pin CSC11_Pin CSC3_Pin CSC2_Pin
                            CSC1_Pin CSB15_Pin CSB14_Pin CSB13_Pin
