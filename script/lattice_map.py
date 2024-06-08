@@ -25,7 +25,7 @@ while True:
     # Normalize the pressure values to range 0-1
     pressure_array = np.array(pressures, dtype=np.float32)
     normalized_pressures = pressure_array - 4140000
-    normalized_pressures = pressure_array / 3000.0
+    normalized_pressures = pressure_array / 50000.0
 
     # Reshape the pressure array to form a heatmap grid
     heatmap = normalized_pressures.reshape((9, 5))  # Adjust the shape as needed
