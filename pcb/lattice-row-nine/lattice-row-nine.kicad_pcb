@@ -12161,6 +12161,20 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" "C1341901"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a7452575-27af-445e-b27b-13bdca48d744")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "QFN*1EP*5x5mm*P0.5mm*")
 		(path "/518e0b75-34f6-4569-b645-e860e2bef3e0")
 		(sheetname "Root")
@@ -14288,6 +14302,30 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "fb26049c-e0ce-4866-a905-1ec08fd260bf")
+	)
+	(gr_text "LatticeRow V1.0"
+		(at 111.5 81.25 0)
+		(layer "B.SilkS")
+		(uuid "19bf4576-4ff1-4c8c-a827-40b9f3d582e9")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.2)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "Designed By: Miguel Flores-Acton"
+		(at 141.25 80.75 0)
+		(layer "B.SilkS")
+		(uuid "4ee21549-d93b-4391-bb57-2e5a79954060")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
 	)
 	(segment
 		(start 95.5205 81.2295)

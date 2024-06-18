@@ -4961,7 +4961,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 156.21) (xy 245.11 156.21)
+			(xy 240.03 140.97) (xy 245.11 140.97)
 		)
 		(stroke
 			(width 0)
@@ -4981,7 +4981,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 118.11) (xy 232.41 118.11)
+			(xy 227.33 102.87) (xy 232.41 102.87)
 		)
 		(stroke
 			(width 0)
@@ -5051,7 +5051,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 100.33) (xy 207.01 100.33)
+			(xy 201.93 85.09) (xy 207.01 85.09)
 		)
 		(stroke
 			(width 0)
@@ -5111,7 +5111,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 128.27) (xy 207.01 128.27)
+			(xy 201.93 113.03) (xy 207.01 113.03)
 		)
 		(stroke
 			(width 0)
@@ -5131,7 +5131,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 115.57) (xy 207.01 115.57)
+			(xy 201.93 100.33) (xy 207.01 100.33)
 		)
 		(stroke
 			(width 0)
@@ -5151,7 +5151,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 87.63) (xy 232.41 87.63)
+			(xy 227.33 72.39) (xy 232.41 72.39)
 		)
 		(stroke
 			(width 0)
@@ -5221,7 +5221,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 87.63) (xy 270.51 87.63)
+			(xy 265.43 72.39) (xy 270.51 72.39)
 		)
 		(stroke
 			(width 0)
@@ -5241,7 +5241,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 146.05) (xy 207.01 146.05)
+			(xy 201.93 130.81) (xy 207.01 130.81)
 		)
 		(stroke
 			(width 0)
@@ -5251,7 +5251,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 115.57) (xy 245.11 115.57)
+			(xy 240.03 100.33) (xy 245.11 100.33)
 		)
 		(stroke
 			(width 0)
@@ -5311,7 +5311,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 85.09) (xy 207.01 85.09)
+			(xy 201.93 69.85) (xy 207.01 69.85)
 		)
 		(stroke
 			(width 0)
@@ -5421,7 +5421,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 118.11) (xy 270.51 118.11)
+			(xy 265.43 102.87) (xy 270.51 102.87)
 		)
 		(stroke
 			(width 0)
@@ -5431,7 +5431,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 128.27) (xy 245.11 128.27)
+			(xy 240.03 113.03) (xy 245.11 113.03)
 		)
 		(stroke
 			(width 0)
@@ -5531,7 +5531,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 102.87) (xy 270.51 102.87)
+			(xy 265.43 87.63) (xy 270.51 87.63)
 		)
 		(stroke
 			(width 0)
@@ -5591,7 +5591,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 130.81) (xy 207.01 130.81)
+			(xy 201.93 115.57) (xy 207.01 115.57)
 		)
 		(stroke
 			(width 0)
@@ -5601,7 +5601,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 133.35) (xy 207.01 133.35)
+			(xy 201.93 118.11) (xy 207.01 118.11)
 		)
 		(stroke
 			(width 0)
@@ -5761,7 +5761,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 143.51) (xy 207.01 143.51)
+			(xy 201.93 128.27) (xy 207.01 128.27)
 		)
 		(stroke
 			(width 0)
@@ -5771,7 +5771,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 133.35) (xy 270.51 133.35)
+			(xy 265.43 118.11) (xy 270.51 118.11)
 		)
 		(stroke
 			(width 0)
@@ -5881,7 +5881,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 102.87) (xy 245.11 102.87)
+			(xy 240.03 87.63) (xy 245.11 87.63)
 		)
 		(stroke
 			(width 0)
@@ -5911,7 +5911,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 82.55) (xy 207.01 82.55)
+			(xy 201.93 67.31) (xy 207.01 67.31)
 		)
 		(stroke
 			(width 0)
@@ -5951,7 +5951,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 148.59) (xy 232.41 148.59)
+			(xy 227.33 133.35) (xy 232.41 133.35)
 		)
 		(stroke
 			(width 0)
@@ -5961,7 +5961,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 161.29) (xy 245.11 161.29)
+			(xy 240.03 146.05) (xy 245.11 146.05)
 		)
 		(stroke
 			(width 0)
@@ -6031,7 +6031,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 87.63) (xy 207.01 87.63)
+			(xy 201.93 72.39) (xy 207.01 72.39)
 		)
 		(stroke
 			(width 0)
@@ -6061,7 +6061,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 158.75) (xy 245.11 158.75)
+			(xy 240.03 143.51) (xy 245.11 143.51)
 		)
 		(stroke
 			(width 0)
@@ -6101,7 +6101,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 113.03) (xy 207.01 113.03)
+			(xy 201.93 97.79) (xy 207.01 97.79)
 		)
 		(stroke
 			(width 0)
@@ -6111,7 +6111,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 133.35) (xy 232.41 133.35)
+			(xy 227.33 118.11) (xy 232.41 118.11)
 		)
 		(stroke
 			(width 0)
@@ -6191,7 +6191,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 85.09) (xy 245.11 85.09)
+			(xy 240.03 69.85) (xy 245.11 69.85)
 		)
 		(stroke
 			(width 0)
@@ -6211,7 +6211,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 102.87) (xy 232.41 102.87)
+			(xy 227.33 87.63) (xy 232.41 87.63)
 		)
 		(stroke
 			(width 0)
@@ -6241,7 +6241,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 82.55) (xy 245.11 82.55)
+			(xy 240.03 67.31) (xy 245.11 67.31)
 		)
 		(stroke
 			(width 0)
@@ -6261,7 +6261,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 97.79) (xy 245.11 97.79)
+			(xy 240.03 82.55) (xy 245.11 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6341,7 +6341,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 102.87) (xy 207.01 102.87)
+			(xy 201.93 87.63) (xy 207.01 87.63)
 		)
 		(stroke
 			(width 0)
@@ -6401,7 +6401,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 148.59) (xy 207.01 148.59)
+			(xy 201.93 133.35) (xy 207.01 133.35)
 		)
 		(stroke
 			(width 0)
@@ -6411,7 +6411,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 161.29) (xy 270.51 161.29)
+			(xy 265.43 146.05) (xy 270.51 146.05)
 		)
 		(stroke
 			(width 0)
@@ -6441,7 +6441,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 100.33) (xy 245.11 100.33)
+			(xy 240.03 85.09) (xy 245.11 85.09)
 		)
 		(stroke
 			(width 0)
@@ -6481,7 +6481,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 118.11) (xy 245.11 118.11)
+			(xy 240.03 102.87) (xy 245.11 102.87)
 		)
 		(stroke
 			(width 0)
@@ -6491,7 +6491,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 133.35) (xy 245.11 133.35)
+			(xy 240.03 118.11) (xy 245.11 118.11)
 		)
 		(stroke
 			(width 0)
@@ -6531,7 +6531,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 113.03) (xy 245.11 113.03)
+			(xy 240.03 97.79) (xy 245.11 97.79)
 		)
 		(stroke
 			(width 0)
@@ -6551,7 +6551,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 87.63) (xy 245.11 87.63)
+			(xy 240.03 72.39) (xy 245.11 72.39)
 		)
 		(stroke
 			(width 0)
@@ -6561,7 +6561,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 130.81) (xy 245.11 130.81)
+			(xy 240.03 115.57) (xy 245.11 115.57)
 		)
 		(stroke
 			(width 0)
@@ -6571,7 +6571,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 97.79) (xy 207.01 97.79)
+			(xy 201.93 82.55) (xy 207.01 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6581,7 +6581,7 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 118.11) (xy 207.01 118.11)
+			(xy 201.93 102.87) (xy 207.01 102.87)
 		)
 		(stroke
 			(width 0)
@@ -6704,7 +6704,7 @@
 		(uuid "07888fc4-efbe-42d7-aff0-518d66fb584a")
 	)
 	(label "SCK"
-		(at 201.93 128.27 0)
+		(at 201.93 113.03 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6715,7 +6715,7 @@
 		(uuid "098519cd-6be4-4231-b3af-b0d778e3abb8")
 	)
 	(label "SCK"
-		(at 201.93 143.51 0)
+		(at 201.93 128.27 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6726,7 +6726,7 @@
 		(uuid "0cdbde2d-74ee-43b4-8294-d8ba501b568a")
 	)
 	(label "CS4"
-		(at 228.6 133.35 0)
+		(at 228.6 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6737,7 +6737,7 @@
 		(uuid "131dacc8-34d8-463b-ade9-397ba3d2a994")
 	)
 	(label "SCK"
-		(at 201.93 113.03 0)
+		(at 201.93 97.79 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6748,7 +6748,7 @@
 		(uuid "13848495-0bfa-47a5-aea7-c30b07b41bfd")
 	)
 	(label "CS9"
-		(at 266.7 133.35 0)
+		(at 266.7 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6759,7 +6759,7 @@
 		(uuid "1ed85b70-ecd3-4e41-b290-ee09953cb468")
 	)
 	(label "MISO"
-		(at 201.93 85.09 0)
+		(at 201.93 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6770,7 +6770,7 @@
 		(uuid "1ef2d6c2-6f5f-4d23-a550-c835a0d51b23")
 	)
 	(label "MISO"
-		(at 201.93 115.57 0)
+		(at 201.93 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6825,7 +6825,7 @@
 		(uuid "336ab6bf-1631-4504-a527-9cd1402d1294")
 	)
 	(label "CS1"
-		(at 228.6 87.63 0)
+		(at 228.6 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6836,7 +6836,7 @@
 		(uuid "34bd6755-63d0-4820-beb9-3141638a5f52")
 	)
 	(label "MISO"
-		(at 240.03 130.81 0)
+		(at 240.03 115.57 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6847,7 +6847,7 @@
 		(uuid "3a4617ed-72af-47b0-9638-53ccb106ef61")
 	)
 	(label "SCK"
-		(at 201.93 82.55 0)
+		(at 201.93 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6858,7 +6858,7 @@
 		(uuid "3d1f32ee-ec27-4efc-836a-0ab2d4fdb646")
 	)
 	(label "MISO"
-		(at 240.03 115.57 0)
+		(at 240.03 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6880,7 +6880,7 @@
 		(uuid "431bad55-a2d9-4af0-9209-23878abd6a5b")
 	)
 	(label "SCK"
-		(at 240.03 156.21 0)
+		(at 240.03 140.97 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6913,7 +6913,7 @@
 		(uuid "46ef4789-c184-4214-8e28-32e422af5287")
 	)
 	(label "MOSI"
-		(at 201.93 87.63 0)
+		(at 201.93 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6935,7 +6935,7 @@
 		(uuid "4851a94b-226a-4cf7-93d8-1f331f722f37")
 	)
 	(label "MISO"
-		(at 240.03 85.09 0)
+		(at 240.03 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6968,7 +6968,7 @@
 		(uuid "558020e6-df67-4b68-8759-672698bf5286")
 	)
 	(label "SCK"
-		(at 240.03 113.03 0)
+		(at 240.03 97.79 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6979,7 +6979,7 @@
 		(uuid "5914b53a-c812-4e31-970d-6f72fba7515f")
 	)
 	(label "CS6"
-		(at 266.7 87.63 0)
+		(at 266.7 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -6990,7 +6990,7 @@
 		(uuid "5c6b48a8-467d-43ab-9ea3-74a4d9bf3234")
 	)
 	(label "MOSI"
-		(at 201.93 133.35 0)
+		(at 201.93 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7001,7 +7001,7 @@
 		(uuid "612a75fc-0a96-4e3c-9839-4cdc3372f5c7")
 	)
 	(label "SCK"
-		(at 240.03 97.79 0)
+		(at 240.03 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7012,7 +7012,7 @@
 		(uuid "61b20032-2b1c-4345-8e79-2e7fdf174ab2")
 	)
 	(label "SCK"
-		(at 201.93 97.79 0)
+		(at 201.93 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7034,7 +7034,7 @@
 		(uuid "64868b2d-fdb8-4407-a39b-bc74df4b4c33")
 	)
 	(label "MOSI"
-		(at 240.03 133.35 0)
+		(at 240.03 118.11 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7067,7 +7067,7 @@
 		(uuid "744a203b-93df-4af6-860b-0c5bc3470556")
 	)
 	(label "MOSI"
-		(at 240.03 118.11 0)
+		(at 240.03 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7089,7 +7089,7 @@
 		(uuid "7bfd3805-1fa7-4133-8c86-539f2f4ce312")
 	)
 	(label "MOSI"
-		(at 240.03 161.29 0)
+		(at 240.03 146.05 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7100,7 +7100,7 @@
 		(uuid "80a3732d-9eed-4742-87d5-669158dd2a5a")
 	)
 	(label "CS5"
-		(at 228.6 148.59 0)
+		(at 228.6 133.35 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7111,7 +7111,7 @@
 		(uuid "82a73dff-fddf-40d2-a73d-8ed40ab7cbb5")
 	)
 	(label "MISO"
-		(at 201.93 130.81 0)
+		(at 201.93 115.57 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7166,7 +7166,7 @@
 		(uuid "986ad487-5ca7-4d99-bd14-c97930a22694")
 	)
 	(label "MISO"
-		(at 240.03 100.33 0)
+		(at 240.03 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7199,7 +7199,7 @@
 		(uuid "a3ac4a6f-dd20-445c-a912-f0665ccb0ba9")
 	)
 	(label "MISO"
-		(at 201.93 146.05 0)
+		(at 201.93 130.81 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7221,7 +7221,7 @@
 		(uuid "a615608e-9858-422f-9b70-71a1685565c9")
 	)
 	(label "CS10"
-		(at 266.7 161.29 0)
+		(at 266.7 146.05 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7243,7 +7243,7 @@
 		(uuid "ad4b8d5a-af93-444f-b230-5e21c65369a2")
 	)
 	(label "MOSI"
-		(at 240.03 87.63 0)
+		(at 240.03 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7265,7 +7265,7 @@
 		(uuid "b2fbb172-46fe-4ee1-8d9b-9aa95e28bb67")
 	)
 	(label "MISO"
-		(at 240.03 158.75 0)
+		(at 240.03 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7276,7 +7276,7 @@
 		(uuid "b80b8040-f561-4574-a36c-534dd0bb57d7")
 	)
 	(label "MOSI"
-		(at 201.93 118.11 0)
+		(at 201.93 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7298,7 +7298,7 @@
 		(uuid "bc9e59ee-81d9-48a9-a8cd-351c1ad0814c")
 	)
 	(label "CS7"
-		(at 266.7 102.87 0)
+		(at 266.7 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7309,7 +7309,7 @@
 		(uuid "bd6d4c50-0160-4022-8736-d217fd6191e3")
 	)
 	(label "SCK"
-		(at 240.03 82.55 0)
+		(at 240.03 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7342,7 +7342,7 @@
 		(uuid "c4561c44-2d56-44ce-9994-a213d77a1875")
 	)
 	(label "SCK"
-		(at 240.03 128.27 0)
+		(at 240.03 113.03 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7353,7 +7353,7 @@
 		(uuid "cd40a39c-f797-4347-b305-01028597f3a3")
 	)
 	(label "MOSI"
-		(at 240.03 102.87 0)
+		(at 240.03 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7364,7 +7364,7 @@
 		(uuid "d3536120-03fe-4afa-8901-b82ed06680db")
 	)
 	(label "CS8"
-		(at 266.7 118.11 0)
+		(at 266.7 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7375,7 +7375,7 @@
 		(uuid "dc5c89df-0572-4060-87d1-06f004c4f4ba")
 	)
 	(label "CS3"
-		(at 228.6 118.11 0)
+		(at 228.6 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7386,7 +7386,7 @@
 		(uuid "ddc7fb90-d24d-4ebd-875c-0ed4677b2ef1")
 	)
 	(label "MOSI"
-		(at 201.93 148.59 0)
+		(at 201.93 133.35 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7408,7 +7408,7 @@
 		(uuid "dfed840d-dfd3-406f-9168-4cc051ea26f3")
 	)
 	(label "MOSI"
-		(at 201.93 102.87 0)
+		(at 201.93 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7441,7 +7441,7 @@
 		(uuid "eb1aee6b-fdeb-4ea3-beb3-3d1a928d4a7b")
 	)
 	(label "MISO"
-		(at 201.93 100.33 0)
+		(at 201.93 85.09 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7463,7 +7463,7 @@
 		(uuid "f8f9e608-3187-4e66-a149-381ebed08044")
 	)
 	(label "CS2"
-		(at 228.6 102.87 0)
+		(at 228.6 87.63 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8894,6 +8894,15 @@
 			)
 		)
 		(property "Description" "STMicroelectronics Arm Cortex-M4 MCU, 128KB flash, 32KB RAM, 170 MHz, 1.71-3.6V, 26 GPIO, UFQFPN32"
+			(at 107.95 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1341901"
 			(at 107.95 63.5 0)
 			(effects
 				(font
@@ -10947,7 +10956,7 @@
 		)
 	)
 	(sheet
-		(at 207.01 125.73)
+		(at 207.01 110.49)
 		(size 20.32 10.16)
 		(fields_autoplaced yes)
 		(stroke
@@ -10959,708 +10968,6 @@
 		)
 		(uuid "0e937fbf-2863-40ac-951c-5055e7293511")
 		(property "Sheetname" "Sensor4"
-			(at 207.01 125.0184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 207.01 136.4746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 207.01 128.27 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "23f2c8d2-9266-4c7b-99af-8c7ac1f06270")
-		)
-		(pin "SDO" output
-			(at 207.01 130.81 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "470e95a7-52df-45c8-8976-8b3d9bfea07e")
-		)
-		(pin "SDI" input
-			(at 207.01 133.35 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "43f399bf-9dd1-492b-884d-7e5cfb50f995")
-		)
-		(pin "CS" input
-			(at 227.33 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "1eb1ddaa-2ff9-48dc-9f07-05891dfd05d3")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "5")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 245.11 95.25)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "33179273-6aa5-44c2-be4e-9d4a44473336")
-		(property "Sheetname" "Sensor7"
-			(at 245.11 94.5384 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 245.11 105.9946 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 245.11 97.79 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "b477e579-0347-4cba-b156-dfc9a2dc8c7f")
-		)
-		(pin "SDO" output
-			(at 245.11 100.33 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "54289808-9004-4075-80cf-cd732132ab57")
-		)
-		(pin "SDI" input
-			(at 245.11 102.87 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "cec0d178-257d-4f83-94bd-62fa42bf0c11")
-		)
-		(pin "CS" input
-			(at 265.43 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "b7e2dde1-95d2-47e7-98cc-e690fcb71384")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "8")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 207.01 95.25)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "5e129fb3-042b-4876-a5c2-7595c677599f")
-		(property "Sheetname" "Sensor2"
-			(at 207.01 94.5384 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 207.01 105.9946 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 207.01 97.79 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "eb289632-98d4-4b45-8b69-3a929463eec9")
-		)
-		(pin "SDO" output
-			(at 207.01 100.33 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "b50d844b-f570-4512-a826-3c9153921101")
-		)
-		(pin "SDI" input
-			(at 207.01 102.87 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "f4eefc9f-4e73-4364-903b-ac9dadf2cea3")
-		)
-		(pin "CS" input
-			(at 227.33 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "f8bdcd9b-2853-43a8-85fa-58ddcaa7d95b")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 245.11 80.01)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "7e2357b9-5847-48e7-9a9e-485335818d2c")
-		(property "Sheetname" "Sensor6"
-			(at 245.11 79.2984 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 245.11 90.7546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 245.11 82.55 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "374cc10a-cc17-4be4-9664-b1e658e9a368")
-		)
-		(pin "SDO" output
-			(at 245.11 85.09 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "3d9e6bf2-c1b2-440d-a502-0c706330dc40")
-		)
-		(pin "SDI" input
-			(at 245.11 87.63 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "3f9fc594-2d3e-4551-818e-0069cbf12752")
-		)
-		(pin "CS" input
-			(at 265.43 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "12eeefda-5e79-4922-8295-d1a1f44ccb66")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "7")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 207.01 80.01)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "88514e6c-4fcf-4e99-83ff-7805f129e4a4")
-		(property "Sheetname" "Sensor1"
-			(at 207.01 79.2984 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 207.01 90.7546 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 207.01 82.55 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "26a0cce8-2818-4af7-8ff7-eb178a7bc734")
-		)
-		(pin "SDO" output
-			(at 207.01 85.09 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "7a4aefb8-2331-43a1-a30f-8546d045f6f4")
-		)
-		(pin "SDI" input
-			(at 207.01 87.63 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "6aadce60-5182-45a4-abe8-3f9ee77c04f7")
-		)
-		(pin "CS" input
-			(at 227.33 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "3e6575bc-f7e2-45c1-86aa-9cdfe2a0c272")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 245.11 153.67)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "a289d35c-8465-4646-8772-c1c84eeb0a35")
-		(property "Sheetname" "SensorEnv"
-			(at 245.11 152.9584 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 245.11 164.4146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 245.11 156.21 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "650350d7-56a2-4759-8357-5d30c465ad6c")
-		)
-		(pin "SDO" output
-			(at 245.11 158.75 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "baa05240-b02a-468e-9497-f828c768aeaa")
-		)
-		(pin "SDI" input
-			(at 245.11 161.29 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "30dcecf0-e322-42e2-8af6-34d4e61e0776")
-		)
-		(pin "CS" input
-			(at 265.43 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "42b6ad37-4516-44c3-a813-0cadb8878db9")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "11")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 245.11 125.73)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "c8539bcb-aac7-43a0-9c03-1ae83b0361ac")
-		(property "Sheetname" "Sensor9"
-			(at 245.11 125.0184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 245.11 136.4746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 245.11 128.27 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "f9a5a350-a9ff-40d5-88a2-4ad931c58e03")
-		)
-		(pin "SDO" output
-			(at 245.11 130.81 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "bedc2b97-acc9-4f0c-8101-830d7393f4c9")
-		)
-		(pin "SDI" input
-			(at 245.11 133.35 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "a43681b3-9db5-4777-9125-48e613ce0a55")
-		)
-		(pin "CS" input
-			(at 265.43 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "352d7aeb-e92f-41d8-bc87-742d0830e35c")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "10")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 245.11 110.49)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "d7061cf2-4f60-4ada-a4f2-afabed2aa31a")
-		(property "Sheetname" "Sensor8"
-			(at 245.11 109.7784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 245.11 121.2346 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 245.11 113.03 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "7779669a-8218-4f6e-8821-6f41a6cb660b")
-		)
-		(pin "SDO" output
-			(at 245.11 115.57 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "e54af445-5a15-452e-b4af-3502a7517ef0")
-		)
-		(pin "SDI" input
-			(at 245.11 118.11 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "54774db7-d7b8-4e88-80da-fc18a7da1925")
-		)
-		(pin "CS" input
-			(at 265.43 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "ee2ff411-5978-4ada-9e30-51303848817f")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "9")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 207.01 140.97)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "dd092353-a777-4c3a-8c27-63e123c43715")
-		(property "Sheetname" "Sensor5"
-			(at 207.01 140.2584 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "sensor.kicad_sch"
-			(at 207.01 151.7146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "SCK" input
-			(at 207.01 143.51 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "a9983fa1-014e-45d1-873c-45c218406362")
-		)
-		(pin "SDO" output
-			(at 207.01 146.05 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "20a30ef5-a0fd-4429-ad42-1c2b8b4fde39")
-		)
-		(pin "SDI" input
-			(at 207.01 148.59 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "836ce9b6-47c4-4d64-9b2f-ace264e42b37")
-		)
-		(pin "CS" input
-			(at 227.33 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "cf118a29-8e15-49ac-b108-c4e7d25a72b0")
-		)
-		(instances
-			(project "lattice-row-nine"
-				(path "/db025671-1389-4311-bf51-57a657a0e868"
-					(page "6")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 207.01 110.49)
-		(size 20.32 10.16)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "fd8d356c-d80b-496d-b9c3-9074f4604423")
-		(property "Sheetname" "Sensor3"
 			(at 207.01 109.7784 0)
 			(effects
 				(font
@@ -11686,7 +10993,7 @@
 				)
 				(justify left)
 			)
-			(uuid "21be83ec-c162-4842-bb62-8a97d06a53fd")
+			(uuid "23f2c8d2-9266-4c7b-99af-8c7ac1f06270")
 		)
 		(pin "SDO" output
 			(at 207.01 115.57 180)
@@ -11696,7 +11003,7 @@
 				)
 				(justify left)
 			)
-			(uuid "05bfe116-a53b-406c-9d77-3d2d4561aedf")
+			(uuid "470e95a7-52df-45c8-8976-8b3d9bfea07e")
 		)
 		(pin "SDI" input
 			(at 207.01 118.11 180)
@@ -11706,10 +11013,712 @@
 				)
 				(justify left)
 			)
-			(uuid "4f61635f-740a-4982-bdc2-82cdad2cc80f")
+			(uuid "43f399bf-9dd1-492b-884d-7e5cfb50f995")
 		)
 		(pin "CS" input
 			(at 227.33 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "1eb1ddaa-2ff9-48dc-9f07-05891dfd05d3")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 245.11 80.01)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "33179273-6aa5-44c2-be4e-9d4a44473336")
+		(property "Sheetname" "Sensor7"
+			(at 245.11 79.2984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 245.11 90.7546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 245.11 82.55 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b477e579-0347-4cba-b156-dfc9a2dc8c7f")
+		)
+		(pin "SDO" output
+			(at 245.11 85.09 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "54289808-9004-4075-80cf-cd732132ab57")
+		)
+		(pin "SDI" input
+			(at 245.11 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "cec0d178-257d-4f83-94bd-62fa42bf0c11")
+		)
+		(pin "CS" input
+			(at 265.43 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "b7e2dde1-95d2-47e7-98cc-e690fcb71384")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 207.01 80.01)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5e129fb3-042b-4876-a5c2-7595c677599f")
+		(property "Sheetname" "Sensor2"
+			(at 207.01 79.2984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 207.01 90.7546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 207.01 82.55 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "eb289632-98d4-4b45-8b69-3a929463eec9")
+		)
+		(pin "SDO" output
+			(at 207.01 85.09 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b50d844b-f570-4512-a826-3c9153921101")
+		)
+		(pin "SDI" input
+			(at 207.01 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f4eefc9f-4e73-4364-903b-ac9dadf2cea3")
+		)
+		(pin "CS" input
+			(at 227.33 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f8bdcd9b-2853-43a8-85fa-58ddcaa7d95b")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 245.11 64.77)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7e2357b9-5847-48e7-9a9e-485335818d2c")
+		(property "Sheetname" "Sensor6"
+			(at 245.11 64.0584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 245.11 75.5146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 245.11 67.31 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "374cc10a-cc17-4be4-9664-b1e658e9a368")
+		)
+		(pin "SDO" output
+			(at 245.11 69.85 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3d9e6bf2-c1b2-440d-a502-0c706330dc40")
+		)
+		(pin "SDI" input
+			(at 245.11 72.39 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "3f9fc594-2d3e-4551-818e-0069cbf12752")
+		)
+		(pin "CS" input
+			(at 265.43 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "12eeefda-5e79-4922-8295-d1a1f44ccb66")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 207.01 64.77)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "88514e6c-4fcf-4e99-83ff-7805f129e4a4")
+		(property "Sheetname" "Sensor1"
+			(at 207.01 64.0584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 207.01 75.5146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 207.01 67.31 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "26a0cce8-2818-4af7-8ff7-eb178a7bc734")
+		)
+		(pin "SDO" output
+			(at 207.01 69.85 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7a4aefb8-2331-43a1-a30f-8546d045f6f4")
+		)
+		(pin "SDI" input
+			(at 207.01 72.39 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "6aadce60-5182-45a4-abe8-3f9ee77c04f7")
+		)
+		(pin "CS" input
+			(at 227.33 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3e6575bc-f7e2-45c1-86aa-9cdfe2a0c272")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 245.11 138.43)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a289d35c-8465-4646-8772-c1c84eeb0a35")
+		(property "Sheetname" "SensorEnv"
+			(at 245.11 137.7184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 245.11 149.1746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 245.11 140.97 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "650350d7-56a2-4759-8357-5d30c465ad6c")
+		)
+		(pin "SDO" output
+			(at 245.11 143.51 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "baa05240-b02a-468e-9497-f828c768aeaa")
+		)
+		(pin "SDI" input
+			(at 245.11 146.05 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "30dcecf0-e322-42e2-8af6-34d4e61e0776")
+		)
+		(pin "CS" input
+			(at 265.43 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "42b6ad37-4516-44c3-a813-0cadb8878db9")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 245.11 110.49)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c8539bcb-aac7-43a0-9c03-1ae83b0361ac")
+		(property "Sheetname" "Sensor9"
+			(at 245.11 109.7784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 245.11 121.2346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 245.11 113.03 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f9a5a350-a9ff-40d5-88a2-4ad931c58e03")
+		)
+		(pin "SDO" output
+			(at 245.11 115.57 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "bedc2b97-acc9-4f0c-8101-830d7393f4c9")
+		)
+		(pin "SDI" input
+			(at 245.11 118.11 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a43681b3-9db5-4777-9125-48e613ce0a55")
+		)
+		(pin "CS" input
+			(at 265.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "352d7aeb-e92f-41d8-bc87-742d0830e35c")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 245.11 95.25)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d7061cf2-4f60-4ada-a4f2-afabed2aa31a")
+		(property "Sheetname" "Sensor8"
+			(at 245.11 94.5384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 245.11 105.9946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 245.11 97.79 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7779669a-8218-4f6e-8821-6f41a6cb660b")
+		)
+		(pin "SDO" output
+			(at 245.11 100.33 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e54af445-5a15-452e-b4af-3502a7517ef0")
+		)
+		(pin "SDI" input
+			(at 245.11 102.87 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "54774db7-d7b8-4e88-80da-fc18a7da1925")
+		)
+		(pin "CS" input
+			(at 265.43 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ee2ff411-5978-4ada-9e30-51303848817f")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 207.01 125.73)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "dd092353-a777-4c3a-8c27-63e123c43715")
+		(property "Sheetname" "Sensor5"
+			(at 207.01 125.0184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 207.01 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 207.01 128.27 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a9983fa1-014e-45d1-873c-45c218406362")
+		)
+		(pin "SDO" output
+			(at 207.01 130.81 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "20a30ef5-a0fd-4429-ad42-1c2b8b4fde39")
+		)
+		(pin "SDI" input
+			(at 207.01 133.35 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "836ce9b6-47c4-4d64-9b2f-ace264e42b37")
+		)
+		(pin "CS" input
+			(at 227.33 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "cf118a29-8e15-49ac-b108-c4e7d25a72b0")
+		)
+		(instances
+			(project "lattice-row-nine"
+				(path "/db025671-1389-4311-bf51-57a657a0e868"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 207.01 95.25)
+		(size 20.32 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "fd8d356c-d80b-496d-b9c3-9074f4604423")
+		(property "Sheetname" "Sensor3"
+			(at 207.01 94.5384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensor.kicad_sch"
+			(at 207.01 105.9946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SCK" input
+			(at 207.01 97.79 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "21be83ec-c162-4842-bb62-8a97d06a53fd")
+		)
+		(pin "SDO" output
+			(at 207.01 100.33 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "05bfe116-a53b-406c-9d77-3d2d4561aedf")
+		)
+		(pin "SDI" input
+			(at 207.01 102.87 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "4f61635f-740a-4982-bdc2-82cdad2cc80f")
+		)
+		(pin "CS" input
+			(at 227.33 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
