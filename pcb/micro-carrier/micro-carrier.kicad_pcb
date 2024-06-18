@@ -130,7 +130,7 @@
 		(uuid "05364b97-0b25-4bbf-b60c-1634f6a67553")
 		(at 153.67 100.33 180)
 		(property "Reference" "U9"
-			(at 7.620001 -2.54 0)
+			(at 8.17 2.59 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "625aa974-aa9f-46bc-b8e8-e27a472f7264")
@@ -632,7 +632,7 @@
 		(uuid "3bcc294c-2eec-4094-949b-dd794c61011d")
 		(at 153.67 92.71 180)
 		(property "Reference" "U10"
-			(at 7.620001 -2.54 0)
+			(at 7.67 2.59 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "fc62d568-8f64-484d-997f-e6de600e0a54")
@@ -883,7 +883,7 @@
 		(uuid "4ff3795c-e67e-47bc-8fe1-d02014e1039e")
 		(at 115.57 92.71)
 		(property "Reference" "U3"
-			(at 7.62 2.54 0)
+			(at 7.93 -2.47 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "1a84c7f0-ee9e-48ba-b44d-00f83d91d5dd")
@@ -1935,7 +1935,7 @@
 		(uuid "7bae40b1-c8b0-47ce-b604-4f15656a8f79")
 		(at 153.67 85.09 180)
 		(property "Reference" "U11"
-			(at 7.620001 -2.54 0)
+			(at 7.67 2.59 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "941770ff-dd1d-4a97-8ee7-97c8ced3e57a")
@@ -2186,7 +2186,7 @@
 		(uuid "7d955464-7761-4e0f-91f2-b1f41979958c")
 		(at 115.57 77.47)
 		(property "Reference" "U1"
-			(at 7.62 2.54 0)
+			(at 7.93 -2.47 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "1c45be26-bc6b-4aa2-b599-bd83a787b50e")
@@ -2870,7 +2870,7 @@
 		(uuid "aa990713-b3ee-44cd-af0f-2a2881dd411e")
 		(at 153.67 115.57 180)
 		(property "Reference" "U7"
-			(at 7.62 -2.54 0)
+			(at 8.169999 2.59 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "ff4b76eb-7820-40bf-b320-83d3d050b620")
@@ -3121,7 +3121,7 @@
 		(uuid "b5fe9b4f-169c-4cf4-9fd0-9f22e838ed4c")
 		(at 115.57 100.33)
 		(property "Reference" "U4"
-			(at 7.62 2.54 0)
+			(at 7.93 -2.47 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "88a2a0c1-0788-40a1-bece-b4e1ec185f0c")
@@ -3374,7 +3374,7 @@
 		(descr "Mounting Hole 3.2mm, M3, DIN965")
 		(tags "mounting hole 3.2mm m3 din965")
 		(property "Reference" "H4"
-			(at 0 4.445 0)
+			(at -3.13 3.15 0)
 			(layer "F.SilkS")
 			(uuid "9a726828-6977-448a-968d-9cbba42e460a")
 			(effects
@@ -3489,7 +3489,7 @@
 		(uuid "bc839e17-356b-465b-a0e7-707610778d4d")
 		(at 115.57 107.95)
 		(property "Reference" "U5"
-			(at 7.62 2.54 0)
+			(at 7.93 -2.47 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "6868a481-389b-4212-88a9-b9c2499197b9")
@@ -3742,7 +3742,7 @@
 		(descr "Mounting Hole 3.2mm, M3, DIN965")
 		(tags "mounting hole 3.2mm m3 din965")
 		(property "Reference" "H1"
-			(at 0 4.445 0)
+			(at 3.39 3.15 0)
 			(layer "F.SilkS")
 			(uuid "929714f4-9b4d-4a02-b555-3846244b4052")
 			(effects
@@ -3857,7 +3857,7 @@
 		(uuid "dbee240c-a19e-45ff-a88c-de5caac7773f")
 		(at 153.67 107.95 180)
 		(property "Reference" "U8"
-			(at 7.620001 -2.54 0)
+			(at 8.17 2.59 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "23a90fff-0b09-49de-b754-555126dba842")
@@ -4225,7 +4225,7 @@
 		(uuid "f9b23839-2d20-4fe7-98b5-76b9af4dd3f1")
 		(at 115.57 85.09)
 		(property "Reference" "U2"
-			(at 7.62 2.54 0)
+			(at 7.93 -2.47 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "65d5d15c-234b-478b-9ef6-bd160a576d77")
@@ -4622,6 +4622,54 @@
 			(justify left bottom mirror)
 		)
 	)
+	(gr_text "A4"
+		(at 114.3 106.426 0)
+		(layer "F.SilkS")
+		(uuid "0814aa11-ec58-4e7a-a193-59921d19896e")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A11"
+		(at 149.352 75.946 0)
+		(layer "F.SilkS")
+		(uuid "32127d40-bde1-4e23-b087-df1fd8093631")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A10"
+		(at 149.352 83.566 0)
+		(layer "F.SilkS")
+		(uuid "359f59de-b82a-4931-942d-bbba873fe341")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A2"
+		(at 114.3 91.186 0)
+		(layer "F.SilkS")
+		(uuid "400bec06-30bb-4e9e-8e9a-acbb97d7c950")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "USB"
 		(at 132.08 76.835 0)
 		(layer "F.SilkS")
@@ -4630,6 +4678,102 @@
 			(font
 				(size 1.5 1.5)
 				(thickness 0.1875)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A6"
+		(at 151.13 114.046 0)
+		(layer "F.SilkS")
+		(uuid "8744ebf8-8735-4ac2-93e0-bb69511b45fa")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A9"
+		(at 151.13 91.186 0)
+		(layer "F.SilkS")
+		(uuid "a3c0298c-6084-4099-9919-30f1faf7b07c")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A3"
+		(at 114.3 98.806 0)
+		(layer "F.SilkS")
+		(uuid "bacdf892-f405-4189-9278-edb6b7c633bb")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A8"
+		(at 151.13 98.806 0)
+		(layer "F.SilkS")
+		(uuid "c6d4ba09-6ced-424e-85a2-546fea5f742d")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A1"
+		(at 114.3 83.566 0)
+		(layer "F.SilkS")
+		(uuid "c88662f3-215a-48f6-9a2a-984dc7bdb2cb")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A7"
+		(at 151.13 106.426 0)
+		(layer "F.SilkS")
+		(uuid "d14a0157-eb75-4f8d-a0a9-903b42d8da7c")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A5"
+		(at 114.3 114 0)
+		(layer "F.SilkS")
+		(uuid "d48f8f65-e859-4171-a991-cfb1dde14667")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A0"
+		(at 114.3 75.946 0)
+		(layer "F.SilkS")
+		(uuid "e0260c26-c0bb-41ad-8eac-8d36ed3a2c2d")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
 			)
 			(justify left bottom)
 		)

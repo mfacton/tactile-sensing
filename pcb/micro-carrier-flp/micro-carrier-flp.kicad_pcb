@@ -130,7 +130,7 @@
 		(uuid "05364b97-0b25-4bbf-b60c-1634f6a67553")
 		(at 146.05 100.33)
 		(property "Reference" "U9"
-			(at 7.112001 -2.54 0)
+			(at -0.549999 -2.57 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "42e88d4c-8555-4f32-a4c3-eac794520323")
@@ -371,7 +371,7 @@
 		(uuid "14648928-5906-409a-adff-aadbb141edc4")
 		(at 123.19 115.57 180)
 		(property "Reference" "U6"
-			(at 7.62 2.54 0)
+			(at -0.81 2.54 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "1ae3acd1-8b5d-4d9a-9a5f-31bde9f91098")
@@ -612,7 +612,7 @@
 		(uuid "3bcc294c-2eec-4094-949b-dd794c61011d")
 		(at 146.05 92.71)
 		(property "Reference" "U10"
-			(at 7.112001 -2.54 0)
+			(at -0.05 -2.57 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "526ce0e8-90e3-4396-a5f7-fefe0fe9d5d4")
@@ -853,7 +853,7 @@
 		(uuid "4ff3795c-e67e-47bc-8fe1-d02014e1039e")
 		(at 123.19 92.71 180)
 		(property "Reference" "U3"
-			(at 7.62 2.54 0)
+			(at -0.81 2.54 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "70c00f55-b803-4b6b-bf70-9ba9467ca859")
@@ -1211,7 +1211,7 @@
 		(uuid "61999040-a8d1-4801-8303-d9c3d8e5c49f")
 		(at 146.05 77.47)
 		(property "Reference" "U12"
-			(at 7.112 -2.54 0)
+			(at -0.050001 -2.57 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "15508939-6b61-4fdd-bb81-233bf31ff861")
@@ -1884,7 +1884,7 @@
 		(uuid "7bae40b1-c8b0-47ce-b604-4f15656a8f79")
 		(at 146.05 85.09)
 		(property "Reference" "U11"
-			(at 7.112001 -2.54 0)
+			(at -0.05 -2.57 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "5828a3fd-f417-4f0b-b309-6da5f85fb010")
@@ -2125,7 +2125,7 @@
 		(uuid "7d955464-7761-4e0f-91f2-b1f41979958c")
 		(at 123.19 77.47 180)
 		(property "Reference" "U1"
-			(at 7.62 2.54 0)
+			(at -0.81 2.54 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "5792a046-e422-4018-933b-8fec48ec8048")
@@ -2798,7 +2798,7 @@
 		(uuid "aa990713-b3ee-44cd-af0f-2a2881dd411e")
 		(at 146.05 115.57)
 		(property "Reference" "U7"
-			(at 7.112 -2.54 0)
+			(at -0.55 -2.57 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "23f01982-05b7-4d4f-b0c3-c3f8a349843f")
@@ -3039,7 +3039,7 @@
 		(uuid "b5fe9b4f-169c-4cf4-9fd0-9f22e838ed4c")
 		(at 123.19 100.33 180)
 		(property "Reference" "U4"
-			(at 7.62 2.54 0)
+			(at -0.81 2.54 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "8e0812c6-e9a1-4d19-9cda-1a5f48ba1352")
@@ -3282,7 +3282,7 @@
 		(descr "Mounting Hole 3.2mm, M3, DIN965")
 		(tags "mounting hole 3.2mm m3 din965")
 		(property "Reference" "H4"
-			(at -3.048 3.556 0)
+			(at -3.048 3.15 0)
 			(layer "F.SilkS")
 			(uuid "0204eb25-82e8-4b74-9ed1-adb22f7fb79d")
 			(effects
@@ -3397,7 +3397,7 @@
 		(uuid "bc839e17-356b-465b-a0e7-707610778d4d")
 		(at 123.19 107.95 180)
 		(property "Reference" "U5"
-			(at 7.62 2.54 0)
+			(at -0.81 2.54 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "e9170c05-ed6e-4733-8cf6-b1d95d784047")
@@ -3755,7 +3755,7 @@
 		(uuid "dbee240c-a19e-45ff-a88c-de5caac7773f")
 		(at 146.05 107.95)
 		(property "Reference" "U8"
-			(at 7.112001 -2.54 0)
+			(at -0.549999 -2.57 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "5ba87202-cef7-42fd-8b88-29a8f8a2bf82")
@@ -4113,7 +4113,7 @@
 		(uuid "f9b23839-2d20-4fe7-98b5-76b9af4dd3f1")
 		(at 123.19 85.09 180)
 		(property "Reference" "U2"
-			(at 7.62 2.54 0)
+			(at -0.81 2.54 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "0e11606d-28d9-4581-b937-152a3d2a5e0c")
@@ -4500,6 +4500,102 @@
 			(justify left bottom mirror)
 		)
 	)
+	(gr_text "A5"
+		(at 114.3 114 0)
+		(layer "F.SilkS")
+		(uuid "1204d095-089c-46d6-b265-450bfa2227c1")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A7"
+		(at 151.13 106.426 0)
+		(layer "F.SilkS")
+		(uuid "16ca882f-a65f-4179-8f5c-2e9001e9cfd3")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A11"
+		(at 149.352 75.946 0)
+		(layer "F.SilkS")
+		(uuid "2386823b-b4c3-43c7-90df-48832fcb4480")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A6"
+		(at 151.13 114.046 0)
+		(layer "F.SilkS")
+		(uuid "357e22b9-a737-4dff-b217-cad92418110f")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A2"
+		(at 114.3 91.186 0)
+		(layer "F.SilkS")
+		(uuid "548187c0-b139-4adc-9edf-8f93a2310699")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A3"
+		(at 114.3 98.806 0)
+		(layer "F.SilkS")
+		(uuid "6b344974-848e-40ee-a500-a8061967a6cc")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A8"
+		(at 151.13 98.806 0)
+		(layer "F.SilkS")
+		(uuid "6c34ff79-32b6-4fa5-9515-e291445ad8f5")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A4"
+		(at 114.3 106.426 0)
+		(layer "F.SilkS")
+		(uuid "6c8e5f28-68c2-441e-85b4-8ff4f6b6f77e")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "USB"
 		(at 132.08 76.835 0)
 		(layer "F.SilkS")
@@ -4508,6 +4604,54 @@
 			(font
 				(size 1.5 1.5)
 				(thickness 0.1875)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A9"
+		(at 151.13 91.186 0)
+		(layer "F.SilkS")
+		(uuid "84e55ae8-54b1-49a9-b92e-17216ca10859")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A1"
+		(at 114.3 83.566 0)
+		(layer "F.SilkS")
+		(uuid "944c9e46-8a2d-4dfb-8984-becf23fc483f")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A0"
+		(at 114.3 75.946 0)
+		(layer "F.SilkS")
+		(uuid "c0ea11bb-ac23-48e9-9de9-d95b7f28b660")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "A10"
+		(at 149.352 83.566 0)
+		(layer "F.SilkS")
+		(uuid "df56b597-c01a-43cb-9955-fd6895b03f0e")
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.3)
 			)
 			(justify left bottom)
 		)
