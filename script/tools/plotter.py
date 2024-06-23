@@ -41,6 +41,7 @@ class Plot:
         pixel_shift=1,
         height_scale=1,
         line_thickness=1,
+        background=PlotColors.BLACK,
         data_colors=list(PlotColors),
         title="Plot",
     ):
@@ -50,7 +51,10 @@ class Plot:
         self.height_scale = height_scale
         self.width = width
         self.height = height
-        self.canvas = np.zeros((height, width + 1, 3), dtype=np.uint8)
+        self.background = background
+        self.canvas = np.full(
+            (self.height, self.width + 1, 3), self.background.value, dtype=np.uint8
+        )
         self.last_points = np.zeros((data_length,))
         self.data_colors = data_colors
         self.first_plot = True
@@ -59,7 +63,7 @@ class Plot:
     def push(self, new_data):
         """Add next point to plot"""
         self.canvas[:, : -self.pixel_shift, :] = self.canvas[:, self.pixel_shift :, :]
-        self.canvas[:, -self.pixel_shift :, :] = 0
+        self.canvas[:, -self.pixel_shift :] = self.background.value
         for s in range(self.data_length):
             if not self.first_plot:
                 cv2.line(
@@ -82,6 +86,9 @@ class Plot:
 
     def reset(self):
         """Resets the plot"""
+        self.canvas = np.full(
+            (self.height, self.width + 1, 3), self.background.value, dtype=np.uint8
+        )
         self.canvas = np.zeros((self.height, self.width + 1, 3), dtype=np.uint8)
         self.first_plot = True
 
