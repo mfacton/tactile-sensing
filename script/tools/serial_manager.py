@@ -25,6 +25,10 @@ class SerialManager:
 
         raise DeviceNotFound(f"{device_name} not found")
 
+    def write_bytes(self, bytes):
+        """Writes byte array"""
+        self.ser.write(bytes)
+
     def read_bytes(self, length):
         """Waits for length bytes recieved"""
         return self.ser.read(length)
