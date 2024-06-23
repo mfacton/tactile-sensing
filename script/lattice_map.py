@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from tools.serial_manager import SerialManager
 
-manager = SerialManager("LatticeBoard1")
+manager = SerialManager("lattice-board")
 
 
 def read_data():
