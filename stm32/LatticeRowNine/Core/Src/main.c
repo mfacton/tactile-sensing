@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2024 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usbd_cdc_if.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,7 +58,56 @@ static void MX_SPI1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+#define LPS22HH_ADDRESS            0xBA
 
+#define LPS22HH_DEVICE_NAME        0b10110011
+
+#define LPS22HH_REG_IF_CTRL        0x0E
+#define LPS22HH_REG_WHO_AM_I       0x0F
+#define LPS22HH_REG_CTRL_REG1      0x10
+#define LPS22HH_REG_CTRL_REG2      0x11
+#define LPS22HH_REG_CTRL_REG3      0x12
+#define LPS22HH_REG_STATUS         0x27
+#define LPS22HH_REG_PRESS_OUT_XL   0x28
+#define LPS22HH_REG_PRESS_OUT_L    0x29
+#define LPS22HH_REG_PRESS_OUT_H    0x2A
+#define LPS22HH_REG_TEMP_OUT_L     0x2B
+#define LPS22HH_REG_TEMP_OUT_H     0x2C
+
+GPIO_TypeDef *chipSelectPorts[10] = { CS1_GPIO_Port, CS2_GPIO_Port,
+CS3_GPIO_Port, CS4_GPIO_Port, CS5_GPIO_Port, CS6_GPIO_Port,
+CS7_GPIO_Port,
+CS8_GPIO_Port, CS9_GPIO_Port, CS10_GPIO_Port };
+uint16_t chipSelectsPins[10] = { CS1_Pin, CS2_Pin, CS3_Pin, CS4_Pin,
+CS5_Pin, CS6_Pin, CS7_Pin, CS8_Pin, CS9_Pin, CS10_Pin };
+
+void LPS22HH_WriteReg(uint16_t sel, uint8_t reg, uint8_t data) {
+	HAL_GPIO_WritePin(chipSelectPorts[sel], chipSelectsPins[sel],
+			GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, &reg, 1, HAL_MAX_DELAY);
+	HAL_SPI_Transmit(&hspi1, &data, 1, HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(chipSelectPorts[sel], chipSelectsPins[sel], GPIO_PIN_SET);
+}
+
+uint8_t LPS22HH_ReadReg(uint16_t sel, uint8_t reg) {
+	uint8_t data = 0;
+	uint8_t regRW = 0x80 | reg;
+	HAL_GPIO_WritePin(chipSelectPorts[sel], chipSelectsPins[sel],
+			GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, &regRW, 1, HAL_MAX_DELAY);
+	HAL_SPI_Receive(&hspi1, &data, 1, HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(chipSelectPorts[sel], chipSelectsPins[sel], GPIO_PIN_SET);
+	return data;
+}
+
+void LPS22HH_ReadRegs(uint16_t sel, uint8_t reg, uint8_t *output, uint16_t len) {
+	uint8_t regRW = 0x80 | reg;
+	HAL_GPIO_WritePin(chipSelectPorts[sel], chipSelectsPins[sel],
+			GPIO_PIN_RESET);
+	HAL_SPI_Transmit(&hspi1, &regRW, 1, HAL_MAX_DELAY);
+	HAL_SPI_Receive(&hspi1, output, len, HAL_MAX_DELAY);
+	HAL_GPIO_WritePin(chipSelectPorts[sel], chipSelectsPins[sel], GPIO_PIN_SET);
+}
 /* USER CODE END 0 */
 
 /**
@@ -92,17 +142,38 @@ int main(void)
   MX_SPI1_Init();
   MX_USB_Device_Init();
   /* USER CODE BEGIN 2 */
+	HAL_Delay(100);
 
+	for (uint8_t cs = 0; cs < 10; cs++) {
+		uint8_t who_am_i = LPS22HH_ReadReg(cs, LPS22HH_REG_WHO_AM_I);
+		if (who_am_i != LPS22HH_DEVICE_NAME) {
+			while (1) {
+			}
+		}
+
+		//configure ODR 200hz
+		//disable low pass filter
+		LPS22HH_WriteReg(cs, LPS22HH_REG_CTRL_REG1, 0b01110000);
+	}
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+	while (1) {
+		uint8_t data[50];
+		for (uint8_t cs = 0; cs < 10; cs++) {
+			uint16_t index = 5 * cs;
+			LPS22HH_ReadRegs(cs, LPS22HH_REG_PRESS_OUT_XL, data + index, 3);
+			LPS22HH_ReadRegs(cs, LPS22HH_REG_TEMP_OUT_L, data + index + 3, 2);
+		}
+
+		CDC_Transmit_FS(data, 50);
+
+		HAL_Delay(5);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 
@@ -170,7 +241,7 @@ static void MX_SPI1_Init(void)
   hspi1.Instance = SPI1;
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_4BIT;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
@@ -209,10 +280,10 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOA, CS4_Pin|CS5_Pin|CS6_Pin|CS1_Pin
-                          |CS3_Pin|CS2_Pin, GPIO_PIN_RESET);
+                          |CS3_Pin|CS2_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, CS10_Pin|CS9_Pin|CS8_Pin|CS7_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, CS10_Pin|CS9_Pin|CS8_Pin|CS7_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : CS4_Pin CS5_Pin CS6_Pin CS1_Pin
                            CS3_Pin CS2_Pin */
@@ -220,14 +291,14 @@ static void MX_GPIO_Init(void)
                           |CS3_Pin|CS2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : CS10_Pin CS9_Pin CS8_Pin CS7_Pin */
   GPIO_InitStruct.Pin = CS10_Pin|CS9_Pin|CS8_Pin|CS7_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
@@ -245,11 +316,10 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1) {
+	}
   /* USER CODE END Error_Handler_Debug */
 }
 
