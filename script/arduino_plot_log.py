@@ -6,7 +6,7 @@ from tools.logger import Logger
 from tools.plotter import Plot
 from tools.serial_manager import DeviceNotFound, SerialManager
 
-NUM_ADC = 9
+NUM_ADC = 12
 
 managers = []
 
@@ -39,6 +39,7 @@ while True:
         data = manager.read_line()
         if len(data) == NUM_ADC * 2 + 2:
             all_values += struct.unpack(f"<{NUM_ADC}H", data[1 : NUM_ADC * 2 + 1])
+            print(all_values)
         else:
             data = False
 
