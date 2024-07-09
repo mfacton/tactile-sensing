@@ -90,7 +90,7 @@ Connect the UR control box directly to the remote PC with an ethernet cable.
 
 Open the network settings from the UR teach pendant (Setup Robot -> Network) and enter these settings:
 ```markdown
-IP address: 192.168.1.101
+IP address: 192.168.1.102
 Subnet mask: 255.255.255.0
 Default gateway: 192.168.1.1
 Preferred DNS server: 192.168.1.1
@@ -101,7 +101,7 @@ Create Wired Connection.
 ```markdown
 IPv4
 Manual
-Address: 192.168.1.102
+Address: 192.168.1.101
 Netmask: 255.255.255.0
 Gateway: 192.168.1.1
 ```
@@ -117,7 +117,7 @@ ping 192.168.1.101
 
 ### Extract Calibration Data
 ```bash
-ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.101 target_filename:="robot_calibration.yaml"
+ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.102 target_filename:="robot_calibration.yaml"
 ```
 
 ## Usage
@@ -125,7 +125,7 @@ ros2 launch ur_calibration calibration_correction.launch.py robot_ip:=192.168.1.
 ```bash
 # Using scaled joint controller
 # If using URSim no need for calibration file
-ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.101 launch_rviz:=false target_filename:="robot_calibration.yaml"
+ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false target_filename:="robot_calibration.yaml"
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5 launch_rviz:=true
 ```
 
