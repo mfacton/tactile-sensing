@@ -114,6 +114,10 @@ ping 192.168.1.101
 ### Setup Robot
 [Installing a URCap](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/user_docs/installation/install_urcap_cb3.html#install-urcap-cb3)
 [URCAP](https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/blob/foxy/ur_robot_driver/resources/)
+```
+# Set External Control Host ID
+192.168.1.101
+```
 
 ### Extract Calibration Data
 ```bash
