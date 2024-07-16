@@ -25,8 +25,8 @@ if device_num == 0:
     sys.exit(1)
 
 plotter = Plot(
-    data_length=NUM_ADC * len(managers),
-    height_scale=0.5,
+    data_length=1,
+    height_scale=1,
     pixel_shift=3,
     title=f"Arduino Micro {device_num}",
 )
@@ -39,10 +39,11 @@ while True:
         data = manager.read_line()
         if len(data) == NUM_ADC * 2 + 2:
             all_values += struct.unpack(f"<{NUM_ADC}H", data[1 : NUM_ADC * 2 + 1])
-            print(all_values)
+            # print(all_values)
         else:
             data = False
 
     if data:
-        plotter.push(all_values)
+        all_values[0] = 512 - all_values[0] / 2
+        plotter.push(all_values[0:1])
 #        logger.push(all_values)

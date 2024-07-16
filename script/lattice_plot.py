@@ -5,14 +5,14 @@ manager = SerialManager("lattice-board")
 
 pout_cal_count = 20
 
-pout_indexes = [10, 11, 12, 13, 14]
-# pout_indexes = []
+# pout_indexes = [10, 11, 12, 13, 14]
+pout_indexes = [14]
 pout_len = len(pout_indexes)
 pout_accum = [0 for _ in range(pout_len)]
 pout_offset = [0 for _ in range(pout_len)]
 
-plot_height = 800
-unit_height = 120
+plot_height = 512
+unit_height = 5
 fsr_pressure = plot_height / unit_height
 
 plotter = Plot(
@@ -22,7 +22,7 @@ plotter = Plot(
     line_thickness=3,
     background=PlotColors.BLACK,
     height=plot_height,
-    width=1400,
+    width=1024,
     title=f"Sensor Readings",
 )
 
@@ -69,5 +69,5 @@ while True:
     for pidx in range(pout_len):
         pout_data[pidx] -= pout_avg
         pout_data[pidx] /= 4096
-        pout_data[pidx] += fsr_pressure / 4
+        pout_data[pidx] += fsr_pressure / 2
     plotter.push(pout_data)
