@@ -1,6 +1,6 @@
 #define NUM_ADC 12
-#define BAUD 115200
-#define DELAY_MS 20
+#define BAUD 57600
+#define DELAY_MS 10
 
 const uint8_t pins[] = { A0, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11 };
 uint16_t vals[NUM_ADC];
