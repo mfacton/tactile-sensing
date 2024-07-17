@@ -6,7 +6,6 @@ import numpy as np
 
 # import rospy
 from std_msgs.msg import Float32MultiArray
-
 from tools.serial_manager import SerialManager
 
 ADC_RESOLUTION = 10
@@ -22,7 +21,7 @@ pout_accum = [0 for _ in range(pout_len)]
 pout_offset = [0 for _ in range(pout_len)]
 
 
-manager = SerialManager("Arduino Micro", device_number=0)
+manager = SerialManager("Arduino Micro", device_number=0, baud=57600)
 rospy.init_node("arduino_node", anonymous=True)
 pub = rospy.Publisher("arduino_sensor", Float32MultiArray, queue_size=QUEUE_SIZE)
 
