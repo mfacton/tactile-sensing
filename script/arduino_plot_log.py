@@ -13,7 +13,7 @@ managers = []
 device_num = 0
 while True:
     try:
-        manager = SerialManager("Arduino Micro", device_number=device_num)
+        manager = SerialManager("Arduino Micro", device_number=device_num, baud=57600)
         managers.append(manager)
         print(f"Device {device_num} log started")
     except DeviceNotFound:
