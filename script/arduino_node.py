@@ -72,5 +72,5 @@ while True:
 
     # leave print statment as it leaves enough delay to no cause issues
     print(pout_data)
-    packet = Float32MultiArray(data=pout_data)
+    packet = Float32MultiArray(data=np.array(pout_data))
     pub.publish(packet)
