@@ -615,7 +615,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "probe-board.step",
       "svg": "",
       "vrml": ""
     },
