@@ -12,5 +12,5 @@ void App_Update(void) {
 	uint8_t send_buf[LPS22HH_BUF_SIZE];
 	Lps22hh_Data(send_buf);
 	CDC_Transmit_FS(send_buf, LPS22HH_BUF_SIZE);
-	HAL_Delay(10);
+	HAL_Delay(5);
 }
