@@ -1,2 +1,3 @@
-# tactile-sensing
-Tactile sensing with soft lattices
+# Robotic Tactile Sensing with Soft Lattices
+
+MIT Computer Science and Artificial Intelligence Laboratory
