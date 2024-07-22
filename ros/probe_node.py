@@ -23,20 +23,19 @@ pout_offset = [0 for _ in range(pout_len)]
 tout_accum = [0 for _ in range(tout_len)]
 tout_offset = [0 for _ in range(tout_len)]
 
+
 def read_data():
     pressures = []
     temperatures = []
-    
+
     data = manager.read_bytes(40)
-    
+
     for s in range(8):
         start_index = s * 5
         pressures.append(
-            data[start_index + 2] << 16 | data[start_index + 1] << 8 | data[start_index]            
+            data[start_index + 2] << 16 | data[start_index + 1] << 8 | data[start_index]
         )
-        temperatures.append(
-            data[start_index + 4] << 8 | data[start_index + 3]
-        )
+        temperatures.append(data[start_index + 4] << 8 | data[start_index + 3])
 
     return pressures, temperatures
 
@@ -53,16 +52,16 @@ def read_select():
     for i in range(tout_len):
         tout_index = tout_indexes[i]
         tout_data.append(temperatures[tout_index] + tout_offset[i])
-    
+
     return pout_data, tout_data
 
 
 for ep in range(cal_count):
     pout_data, tout_data = read_select()
-    
+
     for i in range(pout_len):
         pout_accum[i] += pout_data[i]
-        
+
     for i in range(tout_len):
         tout_accum[i] += tout_data[i]
 
@@ -72,19 +71,19 @@ tout_avg = sum(tout_accum)
 tout_avg /= cal_count * tout_len
 
 for i in range(pout_len):
-    pchan_avg = pout_accum[i] / pout_cal_count
+    pchan_avg = pout_accum[i] / cal_count
     pout_offset[i] = pout_avg - pchan_avg
 
 for i in range(tout_len):
-    tchan_avg = tout_accum[i] / tout_cal_count
+    tchan_avg = tout_accum[i] / cal_count
     tout_offset[i] = tout_avg - tchan_avg
 
 while True:
     pout_data, tout_data = read_select()
-    
+
     for i in range(pout_len):
-        pout_data[i] = (100 * pout_data[i]) / 4096 # convert to pascals
-    
+        pout_data[i] = (100 * pout_data[i]) / 4096  # convert to pascals
+
     for i in range(tout_len):
         tout_data[i] = tout_data[i] / 100
 
@@ -94,4 +93,3 @@ while True:
     temperature_topic.publish(t_packet)
 
     # print(pout_data, tout_data)
-
