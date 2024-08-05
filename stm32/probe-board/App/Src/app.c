@@ -3,7 +3,7 @@
 #include "lps22hh.h"
 
 void App_Init(void) {
-	HAL_Delay(10);
+	HAL_Delay(100);
 	Lps22hh_Init();
 }
 
