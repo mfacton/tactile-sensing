@@ -1,7 +1,7 @@
 from tools.plotter import Plot, PlotColors
 from tools.serial_manager import SerialManager
 
-manager = SerialManager("probe-board", baud=921600)
+manager = SerialManager("probe-board", baud=460800)
 
 pout_cal_count = 20
 

@@ -1,3 +1,6 @@
+import cv2
+import numpy as np
+
 from tools.plotter import Plot, PlotColors
 from tools.serial_manager import SerialManager
 
@@ -5,8 +8,8 @@ manager = SerialManager("lattice-board")
 
 pout_cal_count = 20
 
-# pout_indexes = [10, 11, 12, 13, 14]
-pout_indexes = [14]
+pout_indexes = [x+30 for x in range(15)]
+# pout_indexes = [14]
 pout_len = len(pout_indexes)
 pout_accum = [0 for _ in range(pout_len)]
 pout_offset = [0 for _ in range(pout_len)]
@@ -70,4 +73,22 @@ while True:
         pout_data[pidx] -= pout_avg
         pout_data[pidx] /= 4096
         pout_data[pidx] += fsr_pressure / 2
-    plotter.push(pout_data)
+    # plotter.push(pout_data)
+
+    #map code
+    heatmap = np.array(pout_data).reshape((5, 3))  # Adjust the shape as needed
+
+    # Apply a colormap to the heatmap
+    heatmap_colored = cv2.applyColorMap(
+        (heatmap * 255).astype(np.uint8), cv2.COLORMAP_JET
+    )
+
+    # Resize heatmap for better visualization0
+    heatmap_resized = cv2.resize(
+        heatmap_colored, (500, 900), interpolation=cv2.INTER_NEAREST
+    )
+
+    # Display the heatmap
+    cv2.imshow("Pressure Heatmap", heatmap_resized)
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break

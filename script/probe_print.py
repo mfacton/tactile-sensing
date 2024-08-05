@@ -1,6 +1,6 @@
 from tools.serial_manager import SerialManager
 
-manager = SerialManager("probe-board")
+manager = SerialManager("probe-board", baud=460800)
 
 
 def read_data():
