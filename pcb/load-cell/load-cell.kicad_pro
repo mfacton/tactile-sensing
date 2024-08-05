@@ -619,7 +619,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "load-cell.step",
       "svg": "",
       "vrml": ""
     },
