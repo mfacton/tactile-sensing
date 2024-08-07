@@ -12,8 +12,8 @@ pout_len = len(pout_indexes)
 pout_accum = [0 for _ in range(pout_len)]
 pout_offset = [0 for _ in range(pout_len)]
 
-plot_height = 300
-unit_height = 300
+plot_height = 200
+unit_height = 200
 fsr_pressure = plot_height / unit_height
 
 plotter = Plot(
@@ -23,7 +23,7 @@ plotter = Plot(
     line_thickness=2,
     background=PlotColors.BLACK,
     height=plot_height,
-    width=600,
+    width=400,
     title=f"Sensor Readings",
 )
 
