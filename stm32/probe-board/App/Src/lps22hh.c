@@ -54,7 +54,7 @@ void Lps22hh_Init(void) {
 
 		//configure ODR 200hz
 		//enable low pass filter at bandwidth odr/9
-		lps22hh_write_register(cs, LPS22HH_REG_CTRL_REG1, 0b01111000);
+		lps22hh_write_register(cs, LPS22HH_REG_CTRL_REG1, 0b01111110);
 	}
 }
 
