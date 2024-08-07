@@ -1,0 +1,88 @@
+def rtde_control_loop():
+  step_count_71a4a744_0f04_4b6c_90ce_fea0c40bf651 = 0.0
+  thread Step_Counter_Thread_6f358dad_a69c_4cf7_b124_35e427dd7ae3():
+    while (True):
+      step_count_71a4a744_0f04_4b6c_90ce_fea0c40bf651 = step_count_71a4a744_0f04_4b6c_90ce_fea0c40bf651 + 1.0
+      sync()
+    end
+  end
+  run Step_Counter_Thread_6f358dad_a69c_4cf7_b124_35e427dd7ae3()
+  set_tcp(p[0.0,0.0,0.0,0.0,0.0,0.0])
+  set_payload(0.0)
+  set_standard_analog_input_domain(0, 1)
+  set_standard_analog_input_domain(1, 1)
+  set_tool_analog_input_domain(0, 1)
+  set_tool_analog_input_domain(1, 1)
+  set_analog_outputdomain(0, 0)
+  set_analog_outputdomain(1, 0)
+  set_input_actions_to_default()
+  set_safety_mode_transition_hardness(1)
+  set_gravity([0.0, 0.0, 9.82])
+  set_tool_voltage(0)
+  # begin: URCap Installation Node
+  #   Source: External Control, 1.0.5, FZI Research Center for Information Technology
+  #   Type: External Control
+  # end: URCap Installation Node
+  $ 1 "BeforeStart"
+  $ 2 "setp≔p[0,0,0,0,0,0]"
+  global setp=p[0,0,0,0,0,0]
+  $ 3 "rtde_set_watchdog('input_int_register_0', 1, 'PAUSE')"
+  rtde_set_watchdog("input_int_register_0", 1, "PAUSE")
+  $ 4 "write_output_integer_register(0, 1)"
+  write_output_integer_register(0, 1)
+  $ 18 "Thread_1"
+  thread Thread_1():
+    while (True):
+      $ 19 "Loop"
+      while (True):
+        $ 20 "tmp≔p[0,0,0,0,0,0]"
+        global tmp=p[0,0,0,0,0,0]
+        $ 21 "tmp[0] = read_input_float_register(0)"
+        tmp[0] = read_input_float_register(0)
+        $ 22 "tmp[1] = read_input_float_register(1)"
+        tmp[1] = read_input_float_register(1)
+        $ 23 "tmp[2] = read_input_float_register(2)"
+        tmp[2] = read_input_float_register(2)
+        $ 24 "tmp[3] = read_input_float_register(3)"
+        tmp[3] = read_input_float_register(3)
+        $ 25 "tmp[4] = read_input_float_register(4)"
+        tmp[4] = read_input_float_register(4)
+        $ 26 "tmp[5] = read_input_float_register(5)"
+        tmp[5] = read_input_float_register(5)
+        $ 27 "setp≔tmp"
+        global setp=tmp
+        $ 28 "sync()"
+        sync()
+      end
+    end
+  end
+  threadId_Thread_1 = run Thread_1()
+  while (True):
+    $ 5 "Robot Program"
+    $ 6 "If read_input_integer_register(0)≟1 and setp≠p[0, 0, 0, 0, 0, 0]"
+    if (read_input_integer_register(0) == 1  and  setp != p[0, 0, 0, 0, 0, 0]):
+      $ 7 "'Valid pose received from client'"
+      # 'Valid pose received from client'
+      $ 8 "MoveL"
+      $ 9 "setp" "breakAfter"
+      movel(pose_trans(p[0.0,0.0,0.0,0.0,0.0,0.0], setp), a=0.1, v=2.0)
+      $ 10 "'Confirm that move was executed'"
+      # 'Confirm that move was executed'
+      $ 11 "write_output_integer_register(0, 0)"
+      write_output_integer_register(0, 0)
+      $ 12 "'Wait until script acknowledges confirmation'"
+      # 'Wait until script acknowledges confirmation'
+      $ 13 "Loop read_input_integer_register(0)≟1"
+      while (read_input_integer_register(0) == 1):
+        $ 14 "sync()"
+        sync()
+      end
+      $ 15 "'Request next pose'"
+      # 'Request next pose'
+      $ 16 "write_output_integer_register(0, 1)"
+      write_output_integer_register(0, 1)
+    end
+    $ 17 "sync()"
+    sync()
+  end
+end

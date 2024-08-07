@@ -1,0 +1,29 @@
+ Program
+   BeforeStart
+     setp≔p[0,0,0,0,0,0]
+     rtde_set_watchdog("input_int_register_0", 1, "PAUSE")
+     write_output_integer_register(0, 1)
+   Robot Program
+     If read_input_integer_register(0)≟1 and setp≠p[0, 0, 0, 0, 0, 0]
+       'Valid pose received from client'
+       MoveL
+         setp
+       'Confirm that move was executed'
+       write_output_integer_register(0, 0)
+       'Wait until script acknowledges confirmation'
+       Loop read_input_integer_register(0)≟1
+         sync()
+       'Request next pose'
+       write_output_integer_register(0, 1)
+     sync()
+   Thread_1
+     Loop
+       tmp≔p[0,0,0,0,0,0]
+       tmp[0] = read_input_float_register(0)
+       tmp[1] = read_input_float_register(1)
+       tmp[2] = read_input_float_register(2)
+       tmp[3] = read_input_float_register(3)
+       tmp[4] = read_input_float_register(4)
+       tmp[5] = read_input_float_register(5)
+       setp≔tmp
+       sync()
