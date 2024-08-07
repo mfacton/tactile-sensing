@@ -15,52 +15,29 @@ static uint16_t chipSelectsPins[8] = { CS1_Pin, CS2_Pin, CS3_Pin, CS4_Pin,
 
 static uint8_t data_buf[LPS22HH_BUF_SIZE];
 
-#pragma GCC push_options
-#pragma GCC optimize("O0")
-static inline void lps22hh_delay(void) {
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-	asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");asm("NOP");
-}
-#pragma GCC pop_options
-
 void lps22hh_write_register(enum Sensor sensor, uint8_t reg, uint8_t data) {
-	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor],
-			GPIO_PIN_RESET);
-	lps22hh_delay();
+	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], 0);
 	uint8_t buf[2] = {reg, data};
 	HAL_SPI_Transmit(&LPS22HH_HANDLE, buf, 2, HAL_MAX_DELAY);
-	lps22hh_delay();
-	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], GPIO_PIN_SET);
+	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], 1);
 }
 
 uint8_t lps22hh_read_register(enum Sensor sensor, uint8_t reg) {
 	uint8_t data = 0;
 	uint8_t regRW = 0x80 | reg;
-	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor],
-			GPIO_PIN_RESET);
-	lps22hh_delay();
+	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], 0);
 	HAL_SPI_Transmit(&LPS22HH_HANDLE, &regRW, 1, HAL_MAX_DELAY);
 	HAL_SPI_Receive(&LPS22HH_HANDLE, &data, 1, HAL_MAX_DELAY);
-	lps22hh_delay();
-	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], GPIO_PIN_SET);
+	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], 1);
 	return data;
 }
 
 void lps22hh_read_registers(enum Sensor sensor, uint8_t reg, uint8_t *output, uint16_t len) {
 	uint8_t regRW = 0x80 | reg;
-	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor],
-			GPIO_PIN_RESET);
-	lps22hh_delay();
+	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], 0);
 	HAL_SPI_Transmit(&LPS22HH_HANDLE, &regRW, 1, HAL_MAX_DELAY);
 	HAL_SPI_Receive(&LPS22HH_HANDLE, output, len, HAL_MAX_DELAY);
-	lps22hh_delay();
-	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], GPIO_PIN_SET);
+	HAL_GPIO_WritePin(chipSelectPorts[sensor], chipSelectsPins[sensor], 1);
 }
 
 void Lps22hh_Init(void) {
@@ -77,7 +54,7 @@ void Lps22hh_Init(void) {
 
 		//configure ODR 200hz
 		//enable low pass filter at bandwidth odr/9
-		lps22hh_write_register(cs, LPS22HH_REG_CTRL_REG1, 0b01110000);
+		lps22hh_write_register(cs, LPS22HH_REG_CTRL_REG1, 0b01111000);
 	}
 }
 
