@@ -1,27 +1,3 @@
-#!/usr/bin/env python
-# Copyright (c) 2016-2022, Universal Robots A/S,
-# All rights reserved.
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are met:
-#    * Redistributions of source code must retain the above copyright
-#      notice, this list of conditions and the following disclaimer.
-#    * Redistributions in binary form must reproduce the above copyright
-#      notice, this list of conditions and the following disclaimer in the
-#      documentation and/or other materials provided with the distribution.
-#    * Neither the name of the Universal Robots A/S nor the names of its
-#      contributors may be used to endorse or promote products derived
-#      from this software without specific prior written permission.
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-# DISCLAIMED. IN NO EVENT SHALL UNIVERSAL ROBOTS A/S BE LIABLE FOR ANY
-# DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-# (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-# ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
 import sys
 
 sys.path.append("..")
@@ -30,10 +6,10 @@ import logging
 import rtde.rtde as rtde
 import rtde.rtde_config as rtde_config
 
-
 # logging.basicConfig(level=logging.INFO)
 
-ROBOT_HOST = "localhost"
+# ROBOT_HOST = "192.168.56.101"
+ROBOT_HOST = "192.168.1.101"
 ROBOT_PORT = 30004
 config_filename = "control_loop_configuration.xml"
 
@@ -58,8 +34,12 @@ setp = con.send_input_setup(setp_names, setp_types)
 watchdog = con.send_input_setup(watchdog_names, watchdog_types)
 
 # Setpoints to move the robot to
-setp1 = [-0.12, -0.43, 0.14, 0, 3.11, 0.04]
-setp2 = [-0.12, -0.51, 0.21, 0, 3.11, 0.04]
+# setp1 = [-0.44, -0.07, 0.2, 3.10, -0.42, -0.02]
+pcenter = [-0.52, 0.02, 0.17, 3.10, -0.42, -0.02]
+radius = 0.2
+
+def calc_pos():
+    pass
 
 setp.input_double_register_0 = 0
 setp.input_double_register_1 = 0
@@ -97,6 +77,11 @@ while keep_running:
 
     if state is None:
         break
+
+    # print(state.actual_TCP_force)
+    for n in state.actual_TCP_force:
+        print(f"{n:10.6f}")
+    print()
 
     # do something...
     if move_completed and state.output_int_register_0 == 1:
