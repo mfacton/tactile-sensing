@@ -7,11 +7,11 @@ sys.path.append('')
 import logging
 import time
 
+import rtde.rtde_config as rtde_config
 from matplotlib import pyplot as plt
 
 import rtde as rtde
-import rtde.rtde_config as rtde_config
-from planner import PathPlanTranslation
+from rtde.yt_example.planner import PathPlanTranslation
 
 
 # -------- functions -------------
