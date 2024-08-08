@@ -1,4 +1,4 @@
 github issue for not reading config https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver/issues/457
 search MoveGroupInterface on github issues
 
-
+use ur_rtde for robot node instead of trying to use ros driver
