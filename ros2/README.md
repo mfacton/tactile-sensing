@@ -39,7 +39,9 @@ ping 192.168.1.101
 
 ## UR5 RTDE Setup
 [UR RTDE GUIDE](https://www.universal-robots.com/articles/ur/interface-communication/real-time-data-exchange-rtde-guide/)
+
 [UR RTDE C++/Python Interface](https://pypi.org/project/ur-rtde/)
+
 [UR RTDE Interface Docs](https://sdurobotics.gitlab.io/ur_rtde/)
 ```bash
 pip install ur_rtde
