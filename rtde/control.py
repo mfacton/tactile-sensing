@@ -5,7 +5,7 @@ import logging
 import math
 import time
 
-import rtde_control
+from rtde import rtde, rtde_config
 
 # ROBOT_HOST = "192.168.56.101" # simulation
 ROBOT_HOST = "192.168.1.101" # real robot
