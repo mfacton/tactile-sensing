@@ -63,7 +63,7 @@ colcon build
 ### Source packages
 ```bash
 # Recommended to source in new terminal
-source tactile-sensing/ros/install/local_setup.bash
+source tactile-sensing/ros2/install/local_setup.bash
 ```
 ### Run package
 ```bash
