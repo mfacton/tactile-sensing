@@ -86,15 +86,3 @@ ros2 topic list
 ### Echo topic
 ```bash
 ros2 topic echo <topic_name>
-
-## Depreciated 
-### UR5 Setup
-Based off of the official [UR Installation Guide](https://docs.ros.org/en/ros2_packages/rolling/api/ur_robot_driver/installation/installation.html)
-
-### Install UR Controller Package
-```bash
-sudo apt-get install ros-humble-ur
-
-# Verify installed packages
-ros2 pkg list | grep -i ur
-```
