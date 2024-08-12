@@ -56,7 +56,6 @@ class ControlNode(Node):
         if angle_vel > 0.012:
             angle_vel = 0.012
         self.angle += angle_vel
-        print(angle_vel)
 
         
     def update(self):
