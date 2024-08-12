@@ -17,8 +17,6 @@ class ControlNode(Node):
         self.ydiff = 0
         self.zdiff = 0
 
-        self.fdiffs = [0, 0, 0]
-
         # Create pressure subscription
         self.pressure_sub = self.create_subscription(Float32MultiArray, "/pressures", self.pressure_callback, 10)
         self.ur_control = RTDEControl("192.168.1.101")
@@ -49,21 +47,7 @@ class ControlNode(Node):
         
         
     def update(self):
-        filter_order = 2
-        factor = 5000
-        forces = self.ur_receive.getActualTCPForce()[0:3]
-        scaled_forces = [f/factor for f in forces]
-
-        fdifftemp = [(filter_order-1)*f/filter_order for f in self.fdiffs]
-        for i in range(3):
-            fdifftemp[i] += scaled_forces[i]/filter_order
-
-        # self.fdiffs = fdifftemp
-        # self.fdiffs = [0, 0, fdifftemp[2]]
-
-        # print(f"{fdifftemp[0]:7.4f} {fdifftemp[1]:7.4f} {fdifftemp[2]:7.4f}")
-
-        position = [-0.5+self.xdiff+self.fdiffs[0], -self.ydiff+self.fdiffs[1], 0.35-self.zdiff+self.fdiffs[2], 0, 0, 0]
+        position = [-0.5+self.xdiff, -self.ydiff, 0.35-self.zdiff, 0, 0, 0]
         
         self.ur_control.servoL(position, 0, 0, 0.008, 0.15, 100)
 
