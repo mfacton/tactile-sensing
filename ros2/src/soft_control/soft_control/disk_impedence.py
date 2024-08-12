@@ -26,7 +26,8 @@ class ControlNode(Node):
         self.ur_control = RTDEControl("192.168.1.101")
         self.ur_receive = RTDEReceive("192.168.1.101")
 
-        home = [-0.5, 0, 0.35, 0, 0, 0]
+        # home = [-0.5, 0, 0.35, 0, 0, 0]
+        home = [-0.5, 0.2, 0.45, 0, -math.pi/2, 0]
         self.ur_control.moveL(home, 0.2, 0.1)
         self.begin = True
     
@@ -64,7 +65,8 @@ class ControlNode(Node):
 
         
     def update(self):
-        position = [-0.5+self.px, -self.py, 0.35-self.pz, 0, 0, 0]
+        # position = [-0.5+self.px, -self.py, 0.35-self.pz, 0, 0, 0]
+        position = [-0.5+self.pz, 0.2-self.py, 0.45+self.px, 0, -math.pi/2, 0]
         
         self.ur_control.servoL(position, 0, 0, 0.008, 0.15, 100)
 

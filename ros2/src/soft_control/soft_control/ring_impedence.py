@@ -25,7 +25,8 @@ class ControlNode(Node):
         self.ur_control = RTDEControl("192.168.1.101")
         self.ur_receive = RTDEReceive("192.168.1.101")
 
-        home = [-0.5+self.xdiff, -self.ydiff, 0.35, 0, 0, 0]
+        # home = [-0.5+self.xdiff, -self.ydiff, 0.35, 0, 0, 0]
+        home = [-0.5, 0.2-self.ydiff, 0.45+self.xdiff, 0, -math.pi/2, 0]
         self.ur_control.moveL(home, 0.2, 0.1)
     
     def pressure_callback(self, msg: Float32MultiArray):
@@ -63,7 +64,8 @@ class ControlNode(Node):
         self.xdiff = self.radius*math.cos(self.angle)
         self.ydiff = self.radius*math.sin(self.angle)
 
-        position = [-0.5+self.xdiff, -self.ydiff, 0.35-self.zdiff, 0, 0, 0]
+        # position = [-0.5+self.xdiff, -self.ydiff, 0.35-self.zdiff, 0, 0, 0]
+        position = [-0.5+self.zdiff, 0.2-self.ydiff, 0.45+self.xdiff, 0, -math.pi/2, 0]
         
         self.ur_control.servoL(position, 0, 0, 0.008, 0.15, 100)
 
