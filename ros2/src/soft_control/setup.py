@@ -20,7 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'control = soft_control.control:main'
+            'center_impedence = soft_control.center_impedence:main'
+            'ring_impedence = soft_control.ring_impedence:main'
+            'disk_impedence = soft_control.disk_impedence:main'
         ],
     },
 )
