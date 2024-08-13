@@ -5,6 +5,8 @@ import time
 import cv2
 import numpy as np
 
+animate = False
+
 color_white = (255, 255, 255)
 color_black = (0, 0, 0)
 
@@ -68,6 +70,17 @@ def draw_arrow(pos1, pos2, color):
     cv2.line(canvas, (int(x2 - dx/5 + (dy/5-dy/10)), int(y2 - dy/5 + (dx/5-dx/10))), (int(x2 - dx/10), int(y2 - dy/10)), color, 2)
     cv2.line(canvas, (int(x2 - dx/5 - (dy/5-dy/10)), int(y2 - dy/5 - (dx/5-dx/10))), (int(x2 - dx/10), int(y2 - dy/10)), color, 2)
 
+def draw_maze():
+    clear_canvas()
+    draw_iterations(steps, extra)
+    draw_grid()
+    draw_circle(new_origin, (0, 0, 255))
+
+    for x in range(width):
+        for y in range(height):
+            for dir in maze[x][y]:
+                draw_arrow((x, y), (x+dir[0], y+dir[1]), color_white)
+
 def origin_on_edge():
     if origin[0] == 0 or origin[0] == width-1:
         return True
@@ -105,9 +118,6 @@ extra = 0
 
 # random generation
 while steps <= iterations or not origin_on_edge():
-    clear_canvas()
-    draw_iterations(steps, extra)
-    
     new_dir = None
     new_origin = None
     while True:
@@ -122,27 +132,19 @@ while steps <= iterations or not origin_on_edge():
     
     maze[new_origin[0]][new_origin[1]] = []
 
-    draw_grid()
-    draw_circle(new_origin, (0, 0, 255))
-
-    for x in range(width):
-        for y in range(height):
-            for dir in maze[x][y]:
-                draw_arrow((x, y), (x+dir[0], y+dir[1]), color_white)
+    if animate:
+        draw_maze()
+        show_maze()
+        time.sleep(0.01)
 
     origin = new_origin
     steps += 1
-    show_maze()
 
-    time.sleep(0.01)
+if animate:
+    time.sleep(0.5)
 
-
-time.sleep(1)
 # circle perimeter
 for s in range(2 * (width+height-2) - 1):
-    clear_canvas()
-    draw_iterations(steps, extra)
-    
     new_dir = next_ccw_edege()
     new_origin = (origin[0]+new_dir[0], origin[1]+new_dir[1])
         
@@ -151,19 +153,16 @@ for s in range(2 * (width+height-2) - 1):
     
     maze[new_origin[0]][new_origin[1]] = []
 
-    draw_grid()
-    draw_circle(new_origin, (0, 0, 255))
-
-    for x in range(width):
-        for y in range(height):
-            for dir in maze[x][y]:
-                draw_arrow((x, y), (x+dir[0], y+dir[1]), color_white)
+    if animate:
+        draw_maze()
+        show_maze()
+        time.sleep(0.1)
 
     origin = new_origin
     extra += 1
-    show_maze()
 
-    time.sleep(0.1)
+draw_maze()
+show_maze()
 
 while True:
     time.sleep(1)
