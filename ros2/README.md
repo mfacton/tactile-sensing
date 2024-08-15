@@ -53,7 +53,7 @@ pip install ur_rtde
 cd tactile-sensing/ros2/src
 
 # To create python or c++ package
-ros2 pkg create --build-type <ament_python|ament_cmake> <package_name> --dependencies rclpy
+ros2 pkg create --build-type <ament_python|ament_cmake> <package_name> --dependencies <rclpy|rclcpp>
 ```
 ### Build packages
 ```bash
