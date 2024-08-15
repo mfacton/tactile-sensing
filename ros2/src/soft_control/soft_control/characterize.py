@@ -47,7 +47,7 @@ class ControlNode(Node):
         # theta limits
         ax.set_xlim(0, 2 * np.pi)
         # r limits
-        ax.set_ylim(10180, 10200)
+        ax.set_ylim(101800, 102000)
 
         self.draw_timer = self.create_timer(0.1, self.update_plot)
         self.get_logger().info("Started draw timer")

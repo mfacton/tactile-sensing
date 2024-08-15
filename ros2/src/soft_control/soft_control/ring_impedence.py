@@ -50,7 +50,7 @@ class ControlNode(Node):
 
         #increase angle based on dot product
         dotp = thetax*diffx+thetay*diffy
-        angle_vel = dotp/8000
+        angle_vel = dotp/80000
 
         if angle_vel > 0.012:
             angle_vel = 0.012

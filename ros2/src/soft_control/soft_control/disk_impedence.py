@@ -50,8 +50,8 @@ class ControlNode(Node):
         avg /= 6
         # self.zdiff = (pressures[6]-avg) / 750
 
-        px = self.px + diffx/70000
-        py = self.py + diffy/70000
+        px = self.px + diffx/700000
+        py = self.py + diffy/700000
         
         # constrain to circle if necessary
         if math.sqrt(px*px + py*py) > self.radius:

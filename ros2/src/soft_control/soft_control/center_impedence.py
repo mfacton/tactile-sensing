@@ -38,11 +38,11 @@ class ControlNode(Node):
             diffx += math.cos(angle)*pressures[i]
             diffy += math.sin(angle)*pressures[i]
 
-            self.xdiff = diffx / 1500
-            self.ydiff = diffy / 1500
+            self.xdiff = diffx / 15000
+            self.ydiff = diffy / 15000
         
         avg /= 6
-        self.zdiff = (pressures[6]-avg) / 750
+        self.zdiff = (pressures[6]-avg) / 7500
         
         
     def update(self):

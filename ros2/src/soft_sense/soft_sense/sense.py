@@ -53,7 +53,7 @@ class SenseNode(Node):
         for i in range(8):
             start_index = i * 5
             pressures.append(
-                (data[start_index + 2] << 16 | data[start_index + 1] << 8 | data[start_index])/409.6-self.poffsets[i]
+                (data[start_index + 2] << 16 | data[start_index + 1] << 8 | data[start_index])/40.96-self.poffsets[i]
             )
             temperatures.append((data[start_index + 4] << 8 | data[start_index + 3])/100 - self.toffsets[i])
 
