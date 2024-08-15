@@ -1,6 +1,10 @@
 #include "app.h"
 #include "main.h"
 #include "lps22hh.h"
+#include "gpio.h"
+#include "string.h"
+
+extern SPI_HandleTypeDef hspi1;
 
 extern TIM_HandleTypeDef htim1;
 extern FDCAN_HandleTypeDef hfdcan1;
@@ -8,9 +12,12 @@ extern FDCAN_HandleTypeDef hfdcan1;
 static FDCAN_TxHeaderTypeDef tx_header;
 static uint8_t tx_data[64] = {0};
 
+static struct Gpio_Handle pressure_gpio = {.port = CS1_GPIO_Port, .pin = CS1_Pin};
+static struct Lps22hh_Handle pressure = {.hspi = &hspi1, .csPin = &pressure_gpio};
+
 void App_Init(void) {
 	HAL_Delay(100);
-	Lps22hh_Init();
+	Lps22hh_Init(&pressure);
 	if (HAL_FDCAN_Start(&hfdcan1) != HAL_OK) {
 		Error_Handler();
 	}
@@ -31,8 +38,10 @@ void App_Init(void) {
 }
 
 void app_process(void) {
-	Lps22hh_Update();
-	Lps22hh_Data(tx_data);
+	Lps22hh_ExtHandler(&pressure);
+	memcpy(tx_data, pressure.data, 5);
+//	Lps22hh_Update();
+//	Lps22hh_Data(tx_data);
 
 	tx_header.Identifier = 12;
 
