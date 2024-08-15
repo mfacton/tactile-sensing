@@ -24,7 +24,6 @@ class ControlNode(Node):
         # Create pressure subscription
         self.pressure_sub = self.create_subscription(Float32MultiArray, "/pressures", self.pressure_callback, 10)
         self.ur_control = RTDEControl("192.168.1.101")
-        self.ur_receive = RTDEReceive("192.168.1.101")
 
         # home = [-0.5, 0, 0.35, 0, 0, 0]
         home = [-0.5, 0.2, 0.45, 0, -math.pi/2, 0]
