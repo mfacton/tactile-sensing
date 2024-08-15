@@ -23,8 +23,8 @@ class SenseNode(Node):
         super().__init__("sense")
 
         #init publisher topics
-        self.pressure_pub = self.create_publisher(Float32MultiArray, "/pressures", 10)
-        self.temperature_pub = self.create_publisher(Float32MultiArray, "/temperatures", 10)
+        self.pressure_pub = self.create_publisher(Float32MultiArray, "/pressure", 10)
+        self.temperature_pub = self.create_publisher(Float32MultiArray, "/temperature", 10)
 
         # init calibration variables
         self.poffsets = [0 for x in range(8)]

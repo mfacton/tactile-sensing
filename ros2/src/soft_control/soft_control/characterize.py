@@ -16,7 +16,7 @@ class ControlNode(Node):
         self.running = True
 
         # Create pressure subscription
-        self.pressure_sub = self.create_subscription(Float32MultiArray, "/pressures", self.pressure_callback, 10)
+        self.pressure_sub = self.create_subscription(Float32MultiArray, "/pressure", self.pressure_callback, 10)
         self.joint_sub = self.create_subscription(Float32MultiArray, "/joint", self.joint_callback, 10)
         self.ur_control = RTDEControl("192.168.1.101")
 
