@@ -5,7 +5,7 @@ import time
 import cv2
 import numpy as np
 
-animate = False
+animate = True
 
 color_white = (255, 255, 255)
 color_black = (0, 0, 0)
