@@ -11,19 +11,24 @@ class ControlNode(Node):
         super().__init__("pose")
 
         # Create pose publisher
-        self.pose_pub = self.create_publisher(Float32MultiArray, "/pose", 10)
+        self.tcp_pub = self.create_publisher(Float32MultiArray, "/tcp", 10)
+        self.joint_pub = self.create_publisher(Float32MultiArray, "/joint", 10)
+
         self.ur_receive = RTDEReceive("192.168.1.101")
 
-        self.get_logger().info("Started publishing TCP poses")
+        self.get_logger().info("Started publishing pose data")
 
         
     def run(self):
         while True:
-            pose_data = Float32MultiArray()
+            tcp_data = Float32MultiArray()
+            joint_data = Float32MultiArray()
 
-            pose_data.data = self.ur_receive.getActualTCPPose()
+            tcp_data.data = self.ur_receive.getActualTCPPose()
+            joint_data.data = self.ur_receive.getActualQ()
 
-            self.pose_pub.publish(pose_data)
+            self.tcp_pub.publish(tcp_data)
+            self.joint_pub.publish(joint_data)
 
 def main(args=None):
     rclpy.init(args=args)
