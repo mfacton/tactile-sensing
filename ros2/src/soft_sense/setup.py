@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'sense = soft_sense.sense:main'
+            'sense = soft_sense.sense:main',
+            'interpret = soft_sense.interpret:main',
         ],
     },
 )
