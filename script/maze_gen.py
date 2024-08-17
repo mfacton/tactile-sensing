@@ -22,7 +22,7 @@ height = 8
 maze = [[[] for y in range(height)] for x in range(width)]
 origin = (0, 0)
 
-iterations = width*height*10
+iterations = width*height*5
 
 for x in range(1, width):
     for y in range(height):
@@ -141,7 +141,7 @@ while steps <= iterations or not origin_on_edge():
     steps += 1
 
 if animate:
-    time.sleep(0.5)
+    time.sleep(0.2)
 
 # circle perimeter
 for s in range(2 * (width+height-2) - 1):
@@ -156,7 +156,7 @@ for s in range(2 * (width+height-2) - 1):
     if animate:
         draw_maze()
         show_maze()
-        time.sleep(0.1)
+        time.sleep(0.04)
 
     origin = new_origin
     extra += 1
