@@ -15,7 +15,6 @@ class InterpretNode(Node):
         self.ydiff = 0
         self.zdiff = 0
 
-        # Create pressure subscription
         self.pressure_sub = self.create_subscription(Float32MultiArray, "/pressure", self.pressure_callback, 10)
         self.interpret_pub = self.create_publisher(Float32MultiArray, "/interpret", 10)
     
