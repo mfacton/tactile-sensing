@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'map = soft_map.map:main',
+            'maze = soft_map.maze:main',
         ],
     },
 )

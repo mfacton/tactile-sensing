@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import time
+
 import rclpy
 from rclpy.node import Node
 from rtde_receive import RTDEReceiveInterface as RTDEReceive
@@ -29,6 +31,8 @@ class ControlNode(Node):
 
             self.tcp_pub.publish(tcp_data)
             self.joint_pub.publish(joint_data)
+
+            time.sleep(0.001)
 
 def main(args=None):
     rclpy.init(args=args)

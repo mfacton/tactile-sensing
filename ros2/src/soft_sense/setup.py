@@ -22,7 +22,6 @@ setup(
         'console_scripts': [
             'sense = soft_sense.sense:main',
             'interpret = soft_sense.interpret:main',
-            'characterize = soft_sense.characterize:main',
         ],
     },
 )

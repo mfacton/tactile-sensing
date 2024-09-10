@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import math
+import threading
+import time
 
 import cv2
 import numpy as np
@@ -29,9 +31,6 @@ img_height = grid_length//img_scale
 img_width = grid_width//img_scale
 
 cells = np.zeros((grid_width, grid_length), dtype=np.uint8)
-
-mapH = [7*[8*[0]]]
-mapV = [8*(7*[0])]
 
 # in bgr
 color_map = {
@@ -75,10 +74,17 @@ def draw_cells():
     cv2.imshow("Map", image)
     cv2.waitKey(1)
 
+def draw_maze():
+    image = np.zeros((img_width, img_height, 3), dtype=np.uint8)
+    # TODO
+    
+    cv2.imshow("Maze", image)
+    cv2.waitKey(1)
+
 class MapNode(Node):
     def __init__(self):
         # This is the actual name of the node that will be in ros
-        super().__init__("map")
+        super().__init__("maze")
 
         self.tcp_sub = self.create_subscription(Float32MultiArray, "/tcp", self.tcp_callback, 10)
         self.interpret_sub = self.create_subscription(Float32MultiArray, "/interpret", self.interpret_callback, 10)
@@ -92,10 +98,18 @@ class MapNode(Node):
         self.pos = None
         self.lattice = None
 
-        home = [-0.5, 0, 0.5, 0, math.pi, 0]
-        self.ur_control.moveL(home, 0.2, 0.1)
+        self.x = 0
+        self.run = True
+        self.homing = False
+
+        # home = [-0.5, 0, 0.5, 0, math.pi, 0]
+        # self.ur_control.moveL(home, 0.2, 0.1)
         start = [-0.5, 0, 0.187, 0, math.pi, 0]
         self.ur_control.moveL(start, 0.2, 0.1)
+
+        # start
+        pos = [-0.5, 0.03, 0.187, 0, math.pi, 0]
+        self.ur_control.moveL(pos, 0.2, 0.1, asynchronous = True)
 
     
     def tcp_callback(self, msg: Float32MultiArray):
@@ -124,7 +138,11 @@ class MapNode(Node):
         
         set_cells(cx, cy, lattice_cradius*0.75, 1)
 
-        if self.lattice[0] > 0.005:
+        if self.lattice[0] > 0.002:
+            print("bob")
+            self.ur_control.stopL(2)
+            start = [-0.5, 0, 0.187, 0, math.pi, 0]
+            self.ur_control.moveL(start, 0.2, 0.1)
 
             # parameters
             spot_radius = 0.002 # meters
@@ -154,21 +172,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
-# import time
-# test_x = 500
-# test_y = 500
-# vel_x = 0
-# vel_y = 0
-# while True:
-#     set_explored(int(test_x), int(test_y), 5)
-#     draw_cells()
-#     vel_x += np.random.normal(loc=0, scale=0.3)
-#     vel_y += np.random.normal(loc=0, scale=0.3)
-#     vel_x -= 0.0002*(test_x-500)
-#     vel_y -= 0.0002*(test_y-500)
-#     vel_x *= 0.995
-#     vel_y *= 0.995
-#     test_x += vel_x
-#     test_y += vel_y
-#     time.sleep(0.003)
