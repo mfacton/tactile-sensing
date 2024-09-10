@@ -13,17 +13,17 @@ class InterpretNode(Node):
 
         self.xdiff = 0
         self.ydiff = 0
-        self.zdiff = 0
 
         self.pressure_sub = self.create_subscription(Float32MultiArray, "/pressure", self.pressure_callback, 10)
         self.interpret_pub = self.create_publisher(Float32MultiArray, "/interpret", 10)
+
+        self.get_logger().info(f"Started interpreting sensors as (r, theta)")
     
     def pressure_callback(self, msg: Float32MultiArray):
         # Called on every pressure update
         pressures = msg.data
 
-        scale_plane = 1/50000
-        scale_z = 1/1000000
+        scale_plane = 1/40000
 
         distx = 0
         disty = 0
@@ -39,13 +39,12 @@ class InterpretNode(Node):
 
         distx *= scale_plane
         disty *= scale_plane
-        distz = (avg-pressures[6]) * scale_z
 
         r = math.sqrt(distx * distx + disty * disty)
         theta = math.atan2(disty, distx)
 
         idata = Float32MultiArray()
-        idata.data = [r, theta, distz]
+        idata.data = [r, theta]
 
         self.interpret_pub.publish(idata)
 
