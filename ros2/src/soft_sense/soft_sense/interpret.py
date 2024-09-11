@@ -31,7 +31,7 @@ class InterpretNode(Node):
         avg = 0
         for i in range(6):
             avg += pressures[i]
-            angle = i*math.pi/3 + math.pi/2
+            angle = i*math.pi/3 - math.pi
             distx += math.cos(angle)*pressures[i]
             disty += math.sin(angle)*pressures[i]
 
