@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import math
 import random
+import sys
 import time
 
 import cv2
@@ -8,6 +9,7 @@ import numpy as np
 import rclpy
 from rclpy.node import Node
 from rtde_control import RTDEControlInterface as RTDEControl
+from soft_msgs.srv import Calibrate
 from std_msgs.msg import Float32MultiArray
 
 
@@ -78,8 +80,11 @@ class Grid():
         for value, color in self.color_map.items():
             image[downsampled == value] = color
         
-        image = np.transpose(image, (1, 0, 2))
+        # image = np.transpose(image, (1, 0, 2))
+        image = np.flip(image, 1)
+
         image = np.flip(image, 0)
+
         cv2.imshow("Map", image)
         cv2.waitKey(1)
 
@@ -100,16 +105,25 @@ class Maze():
         self.wallH = [[0 for y in range(self.height+1)] for x in range(self.width)]
         self.wallV = [[0 for y in range(self.height)] for x in range(self.width+1)]
 
+        for i in range(self.width):
+            self.wallH[i][0] = 2
+            self.wallH[i][self.height] = 2
+        for i in range(self.height):
+            self.wallV[0][i] = 2
+            self.wallV[self.width][i] = 2
+
+
         self.img_width = (self.width+1)*self.img_scale
         self.img_height = (self.height+1)*self.img_scale
 
         self.probe_color = (200, 100, 0)
+        self.stack_color = (100, 0, 100)
 
         # in bgr
         self.color_map = {
-            0: (100, 100, 0),   # Blue for 0
-            1: (0, 200, 0), # Green for 1
-            2: (0, 0, 200)  # Red for 2
+            0: (50, 50, 0),   # Blue for 0
+            1: (0, 100, 0), # Green for 1
+            2: (200, 200, 200)  # Red for 2
         }
 
     def set_wall(self, pos, dir, state):
@@ -127,9 +141,24 @@ class Maze():
             # down, affects horizontal segments
             self.wallH[pos[0]][pos[1]] = state
 
+    def get_wall(self, pos, dir):
+        pos = (pos[0]+3, pos[1]+3)
+        if dir == (1, 0):
+            # right, affects vertical segments
+            return self.wallV[pos[0]+1][pos[1]]
+        elif dir == (-1, 0):
+            # left, affects vertical segments
+            return self.wallV[pos[0]][pos[1]]
+        elif dir == (0, 1):
+            # up, affects horizontal segments
+            return self.wallH[pos[0]][pos[1]+1]
+        else:
+            # down, affects horizontal segments
+            return self.wallH[pos[0]][pos[1]]
+
 
     # coordinates in meters
-    def draw_maze(self, centerx, centery):
+    def draw_maze(self, centerx, centery, stack):
         image = np.zeros((self.img_height, self.img_width, 3), dtype=np.uint8)
         
         # horizontal
@@ -142,7 +171,16 @@ class Maze():
             for y in range(0, self.height):
                 cv2.line(image, (int((x+0.5)*self.img_scale), self.img_height-int((y+0.6)*self.img_scale)), (int((x+0.5)*self.img_scale), self.img_height-int((y+1.4)*self.img_scale)), self.color_map[self.wallV[x][y]], max(self.img_scale//20, 1))
 
+        for p in stack:
+            cv2.circle(image, ((p[0]+4)*self.img_scale, self.img_height-(p[1]+4)*self.img_scale), self.img_scale//10, self.stack_color, -1)
+        for i in range(0, len(stack)-1):
+            p1 = stack[i]
+            p2 = stack[i+1]
+            cv2.line(image, ((p1[0]+4)*self.img_scale, self.img_height-(p1[1]+4)*self.img_scale), ((p2[0]+4)*self.img_scale, self.img_height-(p2[1]+4)*self.img_scale), self.stack_color, max(self.img_scale//20, 1))
         cv2.circle(image, (int((centerx/self.grid_scale+4)*self.img_scale), self.img_height-int((centery/self.grid_scale+4)*self.img_scale)), self.img_scale//5, self.probe_color, -1)
+
+        image = np.transpose(image, (1, 0, 2))
+        image = np.flip(image, 0)
 
         cv2.imshow("Maze", image)
         cv2.waitKey(1)
@@ -155,9 +193,10 @@ class MapNode(Node):
 
         self.tcp_sub = self.create_subscription(Float32MultiArray, "/tcp", self.tcp_callback, 10)
         self.interpret_sub = self.create_subscription(Float32MultiArray, "/interpret", self.interpret_callback, 10)
+        self.client = self.create_client(Calibrate, 'calibrate')
         self.ur_control = RTDEControl("192.168.1.101")
 
-        self.grid = Grid(0.6, 0.6, 0.001)
+        self.grid = Grid(0.6, 0.6, 0.0007)
         self.maze = Maze(7, 7, 0.08, 100)
 
         # range x (-0.8, -0.2)
@@ -170,13 +209,34 @@ class MapNode(Node):
         self.stack = [(0, 0)]
         self.direction = None
         self.exploring = False
+        self.backup = False
+        self.finished = False
+
+        cv2.namedWindow('Maze', cv2.WINDOW_NORMAL)
+        cv2.namedWindow('Map', cv2.WINDOW_NORMAL)
+        # do it twice to get rid of glitch
+        # for x in range(2):
+        self.maze.draw_maze(0, 0, self.stack)
+        self.grid.draw_cells()
 
         self.move_robot(0, 0, 0.1)
+        for t in range(300):
+            self.maze.draw_maze(0, 0, self.stack)
+            self.grid.draw_cells()
+            time.sleep(0.1)
+
+        self.request_calibration(100)
+        time.sleep(1)
         self.move_robot(0, 0, 0)
 
     def move_robot(self, x, y, z, asyn = False):
         home = [-0.503+y, -x, z+0.1875, 0, math.pi, 0]
-        self.ur_control.moveL(home, 0.2, 0.1, asyn)
+        self.ur_control.moveL(home, 0.04, 0.4, asyn)
+
+    def request_calibration(self, measurements):
+        request = Calibrate.Request()
+        request.measurements = measurements
+        self.client.call_async(request)
 
     def interpret_callback(self, msg: Float32MultiArray):
         idata = msg.data
@@ -186,7 +246,6 @@ class MapNode(Node):
         tcp_data = msg.data
         # read robot position and offset for maze
         self.pos = [-tcp_data[1], tcp_data[0]+0.503]
-        print(self.pos)
 
         self.update()
 
@@ -204,7 +263,7 @@ class MapNode(Node):
         sample_dist = 0.001 # meters
         span = 0.3 # radians +- from theta
 
-        disp_thresh = 0.0025 # meters
+        disp_thresh = 0.0015 # meters
 
         ang_inc = sample_dist/lattice_radius # radians
         
@@ -219,22 +278,27 @@ class MapNode(Node):
             # one last time for ending
             self.grid.set_cells(centerx+lattice_radius*math.cos(ang), centery+lattice_radius*math.sin(ang), spot_radius, 2)
         
-        self.maze.draw_maze(centerx, centery)
+        self.maze.draw_maze(centerx, centery, self.stack)
         self.grid.draw_cells()
         
+        if self.finished:
+            return
+
         ### Maze ###
         if self.ur_control.isSteady():
-            pass
+            self.request_calibration(10)
             if self.exploring:
                 # path finished no wall
                 new_cell = (self.direction[0]+self.stack[-1][0], self.direction[1]+self.stack[-1][1])
-                self.maze.set_wall(self.stack[-1], self.direction, 1)
-                self.stack.append(new_cell)
-                pass
+                if self.backup:
+                    self.stack.pop()
+                    self.backup = False
+                else:
+                    self.maze.set_wall(self.stack[-1], self.direction, 1)
+                    self.stack.append(new_cell)
             elif self.direction:
                 # path interrupted cause wall
                 self.maze.set_wall(self.stack[-1], self.direction, 2)
-                pass
 
             self.exploring = True
 
@@ -242,66 +306,34 @@ class MapNode(Node):
             directions = [(1, 0), (0, 1), (-1, 0), (0, -1)]
             valid_dirs = []
             for dir in directions:
-                if self.stack[-1][0] + dir[0] < -3 or self.stack[-1][0] + dir[0] > 3:
+                new_cell = (self.stack[-1][0] + dir[0], self.stack[-1][1] + dir[1])
+                if new_cell[0] < -3 or new_cell[0] > 3 or new_cell[1] < -3 or new_cell[1] > 3:
                     continue
-                if self.stack[-1][1] + dir[1] < -3 or self.stack[-1][1] + dir[1] > 3:
+                if self.maze.get_wall(self.stack[-1], dir) == 2 or self.maze.get_wall(self.stack[-1], dir) == 1:
+                    continue
+                if new_cell in self.stack:
                     continue
                 valid_dirs.append(dir)
-            self.direction = valid_dirs[random.randint(0, len(valid_dirs)-1)]
+            if len(valid_dirs) > 0:
+                self.direction = valid_dirs[random.randint(0, len(valid_dirs)-1)]
+            elif len(self.stack) > 1:
+                self.direction = (self.stack[-2][0]-self.stack[-1][0], self.stack[-2][1]-self.stack[-1][1])
+                self.backup = True
+            else:
+                self.get_logger().info("Mapping finished")
+                self.finished = True
 
             # next space
-            self.move_cell(self.stack[-1][0] + self.direction[0], self.stack[-1][1] + self.direction[1])
+            if not self.finished:
+                self.move_cell(self.stack[-1][0] + self.direction[0], self.stack[-1][1] + self.direction[1])
         elif self.exploring and self.lattice[0] > disp_thresh:
-            print("hit")
             self.exploring = False
-            self.ur_control.stopL(3)
+            self.ur_control.stopL(2)
             self.move_cell(self.stack[-1][0], self.stack[-1][1])
 
     def move_cell(self, cx, cy):
         self.move_robot(cx*self.maze.grid_scale, cy*self.maze.grid_scale, 0, asyn=True)
-        # 3,3 -> -0.5, 0
-        # 0,0 -> 
-        # pos = [self.maze, 0, 0.187, 0, math.pi, 0]
-        # self.ur_control.moveL(pos, 0.2, 0.1, asynchronous = True)
-        pass
 
-    # def parse_data(self):
-    #     centerx = self.pos[0] - self.lattice[0]*math.cos(self.lattice[1])
-    #     centery = self.pos[1] - self.lattice[0]*math.sin(self.lattice[1])
-    #     cx = centerx/self.grid.grid_scale
-    #     cy = centery/self.grid.grid_scale
-
-    #     # lattice_radius = 0.032 # meters
-    #     lattice_radius = 0.03
-    #     lattice_cradius = lattice_radius/self.grid.grid_scale
-        
-    #     self.grid.set_cells(cx, cy, lattice_cradius*0.75, 1)
-
-    #     if self.lattice[0] > 0.005:
-    #         # self.ur_control.stopL(2)
-    #         # start = [-0.5, 0, 0.187, 0, math.pi, 0]
-    #         # self.ur_control.moveL(start, 0.2, 0.1)
-
-    #         # parameters
-    #         spot_radius = 0.002 # meters
-    #         sample_dist = 0.001 # meters
-    #         span = 0.3 # radians +- from theta
-
-    #         # precalcs
-    #         spot_cradius = spot_radius/self.grid.grid_scale
-    #         ang_inc = sample_dist/lattice_radius # radians
-
-    #         ang = self.lattice[1]-span
-    #         while ang < self.lattice[1]+span:
-    #             ang += ang_inc
-    #             self.grid.set_cells(cx+lattice_cradius*math.cos(ang), cy+lattice_cradius*math.sin(ang), spot_cradius, 2)
-
-    #         # one last time for ending
-    #         self.grid.set_cells(cx+lattice_cradius*math.cos(ang), cy+lattice_cradius*math.sin(ang), spot_cradius, 2)
-
-    #     self.maze.draw_maze(centerx, centery)
-    #     self.grid.draw_cells()
-    
 
 def main(args=None):
     rclpy.init(args=args)
