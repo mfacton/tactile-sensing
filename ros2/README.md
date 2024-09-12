@@ -84,3 +84,11 @@ ros2 topic list
 ### Echo topic
 ```bash
 ros2 topic echo <topic_name>
+```
+
+## Other commands
+### Create calibration service
+```bash
+ros2 service call /calibrate soft_msgs/srv/Calibrate "{measurements: 200}"
+```
+

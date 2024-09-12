@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-import struct
 import sys
+import time
 
 import rclpy
 import serial
 import serial.tools.list_ports
 from rclpy.node import Node
+from soft_msgs.srv import Calibrate
 from std_msgs.msg import Float32MultiArray
 
 
@@ -18,19 +19,21 @@ def get_active_ports():
     return active_ports
 
 class SenseNode(Node):
-    def __init__(self):
+    def __init__(self, cal_meas=200):
         # This is the actual name of the node that will be in ros
         super().__init__("sense")
 
         #init publisher topics
         self.pressure_pub = self.create_publisher(Float32MultiArray, "/pressure", 10)
         self.temperature_pub = self.create_publisher(Float32MultiArray, "/temperature", 10)
+        self.srv = self.create_service(Calibrate, 'calibrate', self.cal_service)
 
         # init calibration variables
         self.poffsets = [0 for x in range(8)]
         self.toffsets = [0 for x in range(8)]
 
         self.ser = None
+        self.cal = cal_meas
 
         ports = get_active_ports()
         for port in ports:
@@ -45,6 +48,8 @@ class SenseNode(Node):
         if not self.ser:
             self.get_logger().error("Probe board not found")
             sys.exit(1)
+        
+        self.get_logger().info("Started publishing pressures and temperatures")
 
     def read_data(self):
         data = self.ser.read(40)
@@ -59,50 +64,60 @@ class SenseNode(Node):
 
         return pressures, temperatures
     
-    def calibrate(self, measurements):
-        self.get_logger().info("Starting calibration")
+    def cal_service(self, request, response):
+        self.cal = request.measurements
+        self.get_logger().info(f"Received calibration request len: {self.cal}")
+
+        return response
+
+    def calibrate(self):
+        if self.cal == 0:
+            return
         
         paverages = [0 for x in range(8)]
         taverages = [0 for x in range(8)]
 
-        for m in range(measurements):
+        self.poffsets = [0 for x in range(8)]
+        self.toffsets = [0 for x in range(8)]
+
+        for m in range(self.cal):
             pressures, temperatures = self.read_data()
             for i in range(8):
                 paverages[i] += pressures[i]
                 taverages[i] += temperatures[i]
         
-        pavgall = sum(paverages)/8/measurements
-        tavgall = sum(taverages)/8/measurements
+        pavgall = sum(paverages)/8/self.cal
+        tavgall = sum(taverages)/8/self.cal
 
         for i in range(8):
-            self.poffsets[i] = paverages[i]/measurements - pavgall
-            self.toffsets[i] = taverages[i]/measurements - tavgall
+            self.poffsets[i] = paverages[i]/self.cal - pavgall
+            self.toffsets[i] = taverages[i]/self.cal - tavgall
 
-        self.get_logger().info("Finished calibration")
         self.get_logger().info(f"Pressure Offsets: {str([int(p) for p in self.poffsets])}")
         self.get_logger().info(f"Temperature Offsets: {str([int(t) for t in self.toffsets])}")
+        self.cal = 0
 
 
-    def run(self):
-        self.get_logger().info("Starting publishing pressures and temperatures")
-        while True:
-            pressures, temperatures = self.read_data()
-            
-            pdata = Float32MultiArray()
-            tdata = Float32MultiArray()
+    def update(self):
+        self.calibrate()
+        pressures, temperatures = self.read_data()
+        
+        pdata = Float32MultiArray()
+        tdata = Float32MultiArray()
 
-            pdata.data = pressures
-            tdata.data = temperatures
-            
-            self.pressure_pub.publish(pdata)
-            self.temperature_pub.publish(tdata)
+        pdata.data = pressures
+        tdata.data = temperatures
+        
+        self.pressure_pub.publish(pdata)
+        self.temperature_pub.publish(tdata)
 
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SenseNode()
-    node.calibrate(200)
-    node.run()
+    node = SenseNode(200)
+    while True:
+        node.update()
+        rclpy.spin_once(node, timeout_sec=0.001)
     rclpy.shutdown()
 
 if __name__ == '__main__':
