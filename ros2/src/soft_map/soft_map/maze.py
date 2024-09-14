@@ -219,6 +219,7 @@ class MapNode(Node):
         self.maze.draw_maze(0, 0, self.stack)
         self.grid.draw_cells()
 
+        # delay
         self.move_robot(0, 0, 0.1)
         for t in range(300):
             self.maze.draw_maze(0, 0, self.stack)
