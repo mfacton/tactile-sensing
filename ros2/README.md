@@ -1,9 +1,11 @@
 # ROS2 and UR RTDE control
 ## ROS2 System
 ### Nodes
-sensor - Contains all sensor reading
-neural - Contains clasification processing
-robot - Program and Robot control
+control - Some impedence controllers
+pose - Echo TCP and Joints of robot
+map - Maze and Map stuff
+sense - Reads sensor info from probe
+interpret - Interprets sense node readings
 
 ### Topics
 TODO
@@ -45,6 +47,12 @@ ping 192.168.1.101
 [UR RTDE Interface Docs](https://sdurobotics.gitlab.io/ur_rtde/)
 ```bash
 pip install ur_rtde
+```
+
+## Dynamixel Setup
+```bash
+sudo apt-get install ros-jazzy-dynamixel-sdk
+sudo apt-get install ros-jazzy-dynamixel-sdk-examples
 ```
 
 ## Good to know ROS2 commands
