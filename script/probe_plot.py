@@ -7,23 +7,24 @@ pout_cal_count = 20
 
 # pout_indexes = [10, 11, 12, 13, 14]
 # pout_indexes = [14]
-pout_indexes = [x for x in range(8)]
+pout_indexes = [x for x in range(7)]
 pout_len = len(pout_indexes)
 pout_accum = [0 for _ in range(pout_len)]
 pout_offset = [0 for _ in range(pout_len)]
 
-plot_height = 200
-unit_height = 200
+plot_height = 1000
+unit_height = 50
 fsr_pressure = plot_height / unit_height
 
 plotter = Plot(
     data_length=pout_len,
     height_scale=unit_height,
-    pixel_shift=4,
-    line_thickness=2,
+    pixel_shift=3,
+    skip_frames=1,
+    line_thickness=3,
     background=PlotColors.BLACK,
     height=plot_height,
-    width=400,
+    width=2000,
     title=f"Sensor Readings",
 )
 
@@ -71,4 +72,5 @@ while True:
         pout_data[pidx] -= pout_avg
         pout_data[pidx] /= 40960
         pout_data[pidx] += fsr_pressure / 2
+        # pout_data[5] = (pout_data[4] + pout_data[0])/2
     plotter.push(pout_data)
