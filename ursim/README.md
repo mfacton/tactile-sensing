@@ -14,6 +14,10 @@ Robot control interface hosted [here](http://192.168.56.101:6080/vnc.html?host=1
 ```bash
 sudo docker run --rm -it -p 30004:30004 -p 5900:5900 -p 6080:6080 --net ursim_net --ip 192.168.56.101 -v ./urcaps:/urcaps -v ./programs:/ursim/programs --name ursim universalrobots/ursim_cb3
 ```
+or run bash launcher
+```bash
+./launch.sh
+```
 
 ## Safety Settings
 Password for safety settings is 'password'
