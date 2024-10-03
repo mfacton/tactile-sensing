@@ -1,0 +1,9 @@
+launch:
+
+- node:
+    pkg: "soft_sense"
+    exec: "sense"
+
+- node:
+    pkg: "soft_control"
+    exec: "ring_impedence"

@@ -1,0 +1,17 @@
+launch:
+
+- node:
+    pkg: "soft_sense"
+    exec: "sense"
+
+- node:
+    pkg: "soft_sense"
+    exec: "interpret"
+
+- node:
+    pkg: "soft_control"
+    exec: "echo_pose"
+
+- node:
+    pkg: "soft_map"
+    exec: "maze"

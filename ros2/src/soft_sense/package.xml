@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>Soft sensing with probe</description>
   <maintainer email="mfacton1@gmail.com">mfact</maintainer>
-  <license></license>
+  <license>MIT</license>
 
   <depend>rclpy</depend>
 

@@ -220,19 +220,19 @@ class MapNode(Node):
         self.grid.draw_cells()
 
         # delay
-        self.move_robot(0, 0, 0.1)
-        for t in range(300):
-            self.maze.draw_maze(0, 0, self.stack)
-            self.grid.draw_cells()
-            time.sleep(0.1)
+        self.move_robot(0, 0, 0.1, speed=0.2, accel=0.2)
+        # for t in range(300):
+        #     self.maze.draw_maze(0, 0, self.stack)
+        #     self.grid.draw_cells()
+        #     time.sleep(0.1)
 
         self.request_calibration(100)
         time.sleep(1)
-        self.move_robot(0, 0, 0)
+        self.move_robot(0, 0, 0, speed=0.2, accel=0.2)
 
-    def move_robot(self, x, y, z, asyn = False):
+    def move_robot(self, x, y, z, asyn = False, speed=0.04, accel=0.4):
         home = [-0.503+y, -x, z+0.1875, 0, math.pi, 0]
-        self.ur_control.moveL(home, 0.04, 0.4, asyn)
+        self.ur_control.moveL(home, speed, accel, asyn)
 
     def request_calibration(self, measurements):
         request = Calibrate.Request()
@@ -329,7 +329,7 @@ class MapNode(Node):
                 self.move_cell(self.stack[-1][0] + self.direction[0], self.stack[-1][1] + self.direction[1])
         elif self.exploring and self.lattice[0] > disp_thresh:
             self.exploring = False
-            self.ur_control.stopL(2)
+            self.ur_control.stopL(1.8)
             self.move_cell(self.stack[-1][0], self.stack[-1][1])
 
     def move_cell(self, cx, cy):

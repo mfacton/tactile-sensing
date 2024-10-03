@@ -31,7 +31,7 @@ class ControlNode(Node):
         self.request_calibration(100)
         time.sleep(1)
 
-        home = [-0.5, 0, 0.45, 0, 0, 0]
+        home = [-0.5, 0, 0.35, 0, 0, 0]
         # home = [-0.5, 0, 0.45, 0, -math.pi/2, 0]
         self.ur_control.moveL(home, 0.2, 0.1)
 
@@ -50,8 +50,8 @@ class ControlNode(Node):
             diffx += math.cos(angle)*pressures[i]
             diffy += math.sin(angle)*pressures[i]
 
-            self.xdiff = diffx / 30000
-            self.ydiff = diffy / 30000
+            self.xdiff = diffx / 20000
+            self.ydiff = diffy / 15000
         
         avg /= 6
         self.zdiff = (pressures[6]-avg) / 10000
@@ -64,7 +64,7 @@ class ControlNode(Node):
         
     def update(self):
         # self.zdiff = 0
-        position = [-0.5+self.xdiff, -self.ydiff, 0.45-self.zdiff, 0, 0, 0]
+        position = [-0.5+self.xdiff, -self.ydiff, 0.35-self.zdiff, 0, 0, 0]
         # position = [-0.5+self.zdiff, 0-self.ydiff, 0.45+self.xdiff, 0, -math.pi/2, 0]
         
         self.xmax = max(self.xmax, self.xdiff)

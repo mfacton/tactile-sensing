@@ -1,0 +1,5 @@
+launch:
+
+- node:
+    pkg: "soft_control"
+    exec: "echo_pose"

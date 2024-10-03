@@ -5,12 +5,14 @@
   <version>0.0.0</version>
   <description>Soft mapping with UR5 and probe</description>
   <maintainer email="mfacton1@gmail.com">mfact</maintainer>
-  <license></license>
+  <license>MIT</license>
 
   <depend>rclpy</depend>
+  <depend>ur_rtde</depend>
 
   <exec_depend>soft_sense</exec_depend>
   <exec_depend>soft_msgs</exec_depend>
+  <exec_depend>soft_control</exec_depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
