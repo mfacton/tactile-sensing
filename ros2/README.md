@@ -63,12 +63,21 @@ source install/setup.bash
 ```
 
 Ensure robot is in proper position before launching
+
+Run scripts
 ```bash
-ros2 run soft_map maze.yaml
-ros2 run soft_control center.yaml
-ros2 run soft_control disk.yaml
-ros2 run soft_control ring.yaml
+demo/maze.sh
+demo/center.sh
+demo/disk.sh
+demo/ring.sh
+or run ros launch directly
+```bash
+ros2 launch soft_map maze.yaml
+ros2 launch soft_control center.yaml
+ros2 launch soft_control disk.yaml
+ros2 launch soft_control ring.yaml
 ```
+
 
 ## Good to know ROS2 commands
 ### Create package
