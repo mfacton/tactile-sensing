@@ -18,7 +18,7 @@ Connect the UR control box directly to the remote PC with an ethernet cable.
 
 Open the network settings from the UR teach pendant (Setup Robot -> Network) and enter these settings:
 ```markdown
-IP address: 192.168.1.102
+IP address: 192.168.1.101
 Subnet mask: 255.255.255.0
 Default gateway: 192.168.1.1
 Preferred DNS server: 192.168.1.1
@@ -29,7 +29,7 @@ Create Wired Connection.
 ```markdown
 IPv4
 Manual
-Address: 192.168.1.101
+Address: 192.168.1.102
 Netmask: 255.255.255.0
 Gateway: 192.168.1.1
 ```
