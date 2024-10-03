@@ -71,6 +71,10 @@ source install/setup.bash
 
 Ensure robot is in proper position before launching
 
+Watch cable if moving from up to down position
+
+If free drive isn't working, make sure to stop program on pedant
+
 Run scripts
 ```bash
 demo/maze.sh
