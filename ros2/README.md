@@ -55,6 +55,13 @@ sudo apt-get install ros-jazzy-dynamixel-sdk
 sudo apt-get install ros-jazzy-dynamixel-sdk-examples
 ```
 
+## Serial Setup
+If you haven't before, give user permissions for serail ports
+```bash
+sudo usermod -aG dialout $USER
+```
+Then re-login
+
 ## Run Demos
 Run from ros2/ folder
 ```bash
