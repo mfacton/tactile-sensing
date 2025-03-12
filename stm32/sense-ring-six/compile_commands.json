@@ -1,0 +1,122 @@
+[
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/sense-ring-six.dir/Core/Src/main.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/main.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/main.c",
+  "output": "CMakeFiles/sense-ring-six.dir/Core/Src/main.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/sense-ring-six.dir/Core/Src/stm32g4xx_it.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/stm32g4xx_it.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/stm32g4xx_it.c",
+  "output": "CMakeFiles/sense-ring-six.dir/Core/Src/stm32g4xx_it.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/sense-ring-six.dir/Core/Src/stm32g4xx_hal_msp.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/stm32g4xx_hal_msp.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/stm32g4xx_hal_msp.c",
+  "output": "CMakeFiles/sense-ring-six.dir/Core/Src/stm32g4xx_hal_msp.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/sense-ring-six.dir/Core/Src/sysmem.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/sysmem.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/sysmem.c",
+  "output": "CMakeFiles/sense-ring-six.dir/Core/Src/sysmem.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/sense-ring-six.dir/Core/Src/syscalls.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/syscalls.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/syscalls.c",
+  "output": "CMakeFiles/sense-ring-six.dir/Core/Src/syscalls.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g -o CMakeFiles/sense-ring-six.dir/startup_stm32g431xx.s.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/startup_stm32g431xx.s",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/startup_stm32g431xx.s",
+  "output": "CMakeFiles/sense-ring-six.dir/startup_stm32g431xx.s.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/system_stm32g4xx.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Src/system_stm32g4xx.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj"
+},
+{
+  "directory": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/cmake/stm32cubemx",
+  "command": "/usr/bin/arm-none-eabi-gcc -DDEBUG -DSTM32G431xx -DUSE_HAL_DRIVER -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Core/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Device/ST/STM32G4xx/Include -I/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj -c /home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c",
+  "file": "/home/mfact/Projects/tactile-sensing/stm32/sense-ring-six/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c",
+  "output": "cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj"
+}
+]
