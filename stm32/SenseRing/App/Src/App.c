@@ -7,7 +7,7 @@
 
 #include "App.h"
 #include "main.h"
-#include "lps22hh.h"
+//#include "lps22hh.h"
 
 
 extern FDCAN_HandleTypeDef hfdcan1;
@@ -19,16 +19,12 @@ FDCAN_TxHeaderTypeDef TxHeader;
 
 uint8_t TxData[8];
 
-struct Lps22hh_Handle sensor1;
+//struct Lps22hh_Handle sensor1 = {.hspi=&hspi1, .csPort = CS1_GPIO_Port, .csPin = CS1_Pin};
 
 
 
 void App_Init(void){
 
-	sensor1.hspi = &hspi1;//10Mhz max
-	sensor1.csPort = GPIOA;
-	sensor1.csPin = GPIO_PIN_3;
-	sensor1.intPin = 0;
 
 	FDCAN_Config();
 	TxData[0] = 100;
@@ -40,7 +36,7 @@ void App_Init(void){
 	TxData[6] = 60;
 	TxData[7] = 70;
 
-	Lps22hh_Init(&sensor1);
+//	Lps22hh_Init(&sensor1);
 
 
 }
@@ -57,9 +53,9 @@ void App_Update(void){
 	TxData[6] = 0xff;
 	TxData[7]++;
 
-
-
 	HAL_Delay(100);
+
+
 	if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK) Error_Handler();
 
 
@@ -97,12 +93,13 @@ void FDCAN_Config(void){
   TxHeader.Identifier = 0x7FF;
   TxHeader.IdType = FDCAN_STANDARD_ID;
   TxHeader.TxFrameType = FDCAN_DATA_FRAME;
-  TxHeader.DataLength = FDCAN_DLC_BYTES_8;
-  TxHeader.ErrorStateIndicator = FDCAN_ESI_PASSIVE;
-  TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
-  TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
+  TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+  TxHeader.BitRateSwitch = FDCAN_BRS_ON;
+  TxHeader.FDFormat = FDCAN_FD_CAN;
   TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
   TxHeader.MessageMarker = 0;
+
+  TxHeader.DataLength = FDCAN_DLC_BYTES_8;
 
 }
 
