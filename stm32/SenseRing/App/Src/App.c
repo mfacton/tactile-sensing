@@ -17,11 +17,18 @@ extern SPI_HandleTypeDef hspi1;
 
 FDCAN_TxHeaderTypeDef TxHeader;
 
-uint8_t TxData[8];
+uint8_t TxData[32];
 
 struct Lps22hh_Handle sensor1;
+struct Lps22hh_Handle sensor1 = {.hspi=&hspi1, .csPort = CS1_GPIO_Port, .csPin = CS1_Pin, .intPin = 0, .addy = 0x1};
+struct Lps22hh_Handle sensor2 = {.hspi=&hspi1, .csPort = CS2_GPIO_Port, .csPin = CS2_Pin, .intPin = 0, .addy = 0x2};
+struct Lps22hh_Handle sensor3 = {.hspi=&hspi1, .csPort = CS3_GPIO_Port, .csPin = CS3_Pin, .intPin = 0, .addy = 0x3};
+struct Lps22hh_Handle sensor4 = {.hspi=&hspi1, .csPort = CS4_GPIO_Port, .csPin = CS4_Pin, .intPin = 0, .addy = 0x4};
+struct Lps22hh_Handle sensor5 = {.hspi=&hspi1, .csPort = CS5_GPIO_Port, .csPin = CS5_Pin, .intPin = 0, .addy = 0x5};
+struct Lps22hh_Handle sensor6 = {.hspi=&hspi1, .csPort = CS6_GPIO_Port, .csPin = CS6_Pin, .intPin = 0, .addy = 0x6};
 
 
+void compileData(struct Lps22hh_Handle* sensor, uint8_t* Arr);
 
 void App_Init(void){
 
@@ -41,12 +48,23 @@ void App_Init(void){
 	TxData[7] = 70;
 
 	Lps22hh_Init(&sensor1);
+	Lps22hh_Init(&sensor1);
+	Lps22hh_Init(&sensor2);
+	Lps22hh_Init(&sensor3);
+	Lps22hh_Init(&sensor4);
+	Lps22hh_Init(&sensor5);
+	Lps22hh_Init(&sensor6);
 
 
 }
 
 void App_Update(void){
-//	Lps22hh_ExtHandler(&sensor1);
+	Lps22hh_ExtHandler(&sensor1);
+	Lps22hh_ExtHandler(&sensor2);
+	Lps22hh_ExtHandler(&sensor3);
+	Lps22hh_ExtHandler(&sensor4);
+	Lps22hh_ExtHandler(&sensor5);
+	Lps22hh_ExtHandler(&sensor6);
 
 //	TxData[0] = *sensor1.data;
 //	TxData[1] = *(sensor1.data+1);
@@ -60,9 +78,27 @@ void App_Update(void){
 
 
 	HAL_Delay(100);
+	TxData[0] = 0xff;
+//	TxData[1] = 0xff;
+
+	compileData(&sensor1,TxData);
+	compileData(&sensor2,TxData);
+	compileData(&sensor3,TxData);
+	compileData(&sensor4,TxData);
+	compileData(&sensor5,TxData);
+	compileData(&sensor6,TxData);
+
 	if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK) Error_Handler();
 
+	HAL_Delay(10);
 
+
+}
+
+void compileData(struct Lps22hh_Handle* sensor, uint8_t* Arr){
+	for(int i = 0; i < 3;i++){
+		Arr[((sensor->addy) * 3) + i] = sensor->data[i];
+	}
 }
 
 
@@ -103,6 +139,7 @@ void FDCAN_Config(void){
   TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
   TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
   TxHeader.MessageMarker = 0;
+  TxHeader.DataLength = FDCAN_DLC_BYTES_32;
 
 }
 

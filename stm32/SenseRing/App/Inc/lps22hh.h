@@ -78,12 +78,13 @@ struct Lps22hh_Handle {
     GPIO_TypeDef* csPort;
     uint16_t csPin;
 
-
     uint16_t intPin;
     // internal
     uint8_t init;
 
     uint8_t* data;
+
+    uint8_t addy;
 };
 
 void Lps22hh_Init(struct Lps22hh_Handle* handle);
